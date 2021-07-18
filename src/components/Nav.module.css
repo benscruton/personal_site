@@ -1,0 +1,46 @@
+.wrapper{
+    display: flex;
+    background-color: #235789;
+    color: #F0E7D8;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.title{
+    padding: 0;
+}
+
+.pages{
+    display: inline;
+    padding: 0px;
+}
+
+.navlink{
+    display: inline;
+    padding: 10px;
+}
+
+.navtext{
+    text-decoration: none;
+    color: #F0E7D8;
+}
+
+.navlink:hover{
+    display: inline;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F0E7D8;
+}
+
+.navlink:hover a{
+    color: hotpink;
+}
+
+.navtext:hover{
+    color: #94618E;
+    background-color: #F0E7D8;
+    text-decoration: none;
+}
