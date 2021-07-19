@@ -1,33 +1,31 @@
 import React from "react";
 import styles from "./Nav.module.css";
-import { Link } from "@reach/router";
+import { navigate } from "@reach/router";
 
-interface Props {
-
-}
+interface Props {}
 
 const Nav: React.FC<Props> = () => {
 
   return (
     <div className={styles.wrapper}>
-      <h2 className={styles.title}>Hello!</h2>
-      <ul className={styles.pages}>
-        <li className={styles.navlink}>
-          <Link to="/" className={styles.navtext}>
+      <ul className={styles.links}>
+        <li className={styles.navlink} onClick={() => navigate("/")}>
+          <span className={styles.navtext}>
             Home
-          </Link>
+          </span>
         </li>
 
-        <li className={styles.navlink}>
-          <Link to="/about" className={styles.navtext}>
+        <li className={styles.navlink}
+        onClick={() => navigate("/about")}>
+          <span className={styles.navtext}>
             About
-          </Link>
+          </span>
         </li>
 
-        <li className={styles.navlink}>
-          <Link to="/projects" className={styles.navtext}>
+        <li className={styles.navlink} onClick={() => navigate("/projects")}>
+          <span className={styles.navtext}>
             Projects
-          </Link>
+          </span>
         </li>
 
       </ul>

@@ -1,6 +1,7 @@
 import React from 'react';
-import Nav from "./components/Nav";
 import Background from "./components/Background";
+import Intro from "./components/Intro";
+import Nav from "./components/Nav";
 import Home from "./views/Home";
 import About from "./views/About";
 import Projects from "./views/Projects";
@@ -11,8 +12,8 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Background />
+      <Intro />
       <Nav />
-      this text is in App.tsx
       <Router>
         <Home path="/" />
         <About path="/about" />

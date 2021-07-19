@@ -3,10 +3,12 @@
   padding: 0px;
   vertical-align: top;
   box-sizing: border-box;
+  color: #161925;
 }
 
 .App {
-  text-align: center;
+  /* text-align: center; */
+  padding: 10px;
 }
 
 .App-logo {

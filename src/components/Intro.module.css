@@ -1,0 +1,16 @@
+.wrapper{
+    display: block;
+    text-align: center;
+}
+
+.multipleitems{
+    display: flex;
+    max-width: 400px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icons{
+    margin: 10px;
+    height: 25px;
+}
