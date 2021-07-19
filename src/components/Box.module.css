@@ -1,0 +1,8 @@
+.wrapper{
+    display: inline-block;
+    background-color: white;
+    margin: 5px auto;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 4px 8px;
+    border-radius: 5px;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Nav.module.css";
-import {Link} from "@reach/router";
+import { Link } from "@reach/router";
 
 interface Props {
 

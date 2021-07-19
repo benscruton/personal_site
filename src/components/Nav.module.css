@@ -1,7 +1,7 @@
 .wrapper{
     display: flex;
     background-color: #235789;
-    color: #F0E7D8;
+    color: #ffdead;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -25,22 +25,16 @@
 
 .navtext{
     text-decoration: none;
-    color: #F0E7D8;
+    color: #ffdead;
 }
 
 .navlink:hover{
     display: inline;
     padding: 10px;
     border-radius: 10px;
-    background-color: #F0E7D8;
+    background-color: #ffdead;
 }
 
 .navlink:hover a{
-    color: hotpink;
-}
-
-.navtext:hover{
-    color: #94618E;
-    background-color: #F0E7D8;
-    text-decoration: none;
+    color: #235789;
 }
