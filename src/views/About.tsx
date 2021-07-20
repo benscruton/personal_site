@@ -7,16 +7,11 @@ interface Props {
   path: RouteComponentProps
 }
 
-
-
-const boxStyle: CSS.Properties = {
-  // height: "200px",
-  // width: "120px",
-  backgroundColor: "white",
-  margin: "0 auto",
-  boxShadow: "rgba(0, 0, 0, 0.4) 2px 4px 8px",
-  // border: "1px solid black",
-  borderRadius: "5px"
+const boxDimensions: CSS.Properties = {
+  height: "200px",
+  width: "50%",
+  maxWidth: "1000px",
+  minWidth: "100px"
 }
 
 const About: React.FC<Props> = () => {
@@ -24,15 +19,9 @@ const About: React.FC<Props> = () => {
     <div>
       <h1>About</h1>
       <p>some more words go in this part</p>
-      <div style={boxStyle}>
-        hello
-      </div>
       <Box
-        height="200px"
-        width="50%"
-        maxWidth="1000px"
-        minWidth="999px"
-        title="Hello there"
+        dimensions={boxDimensions}
+        title={{text: "Hello there"}}
         paragraphs={["What's that over there?", "You feel sad."]}
       />
     </div>

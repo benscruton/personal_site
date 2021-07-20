@@ -2,51 +2,51 @@ import React from "react";
 import styles from "./Box.module.css";
 import CSS from "csstype";
 import { Link } from "@reach/router";
-
-interface Media{
-  address: string,
-  altText: string,
-  height?: string,
-  width?: string
-}
+import Media from "./interfaces/Media";
+import Title from "./interfaces/Title";
 
 interface Props {
-  title?: string,
-  titleLink?: string,
+  title?: Title,
+  introText?: string[],
   media?: Media,
   paragraphs?: string[],
-  height?: string,
-  minHeight?: string,
-  maxHeight?: string,
-  width?: string,
-  minWidth?: string,
-  maxWidth?: string,
+  dimensions?: CSS.Properties
 }
 
-const Box: React.FC<Props> = ({title, titleLink, media, paragraphs, height, minHeight, maxHeight, width, minWidth, maxWidth}) => {
-
-  const boxStyle: CSS.Properties = {height, minHeight, maxHeight, width, minWidth, maxWidth};
+const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions}) => {
 
   return (
-    <div className={styles.wrapper} style={boxStyle}>
+    <div className={styles.wrapper} style={dimensions}>
       {title? 
-        titleLink?
-          <Link to={titleLink}>
-            <h2 className={styles.title}>{title}</h2>
+        title.linkAddress?
+          <Link to={title.linkAddress}>
+            <h2 className={styles.title}>{title.text}</h2>
           </Link>
           :
-          <h2 className={styles.title}>{title}</h2>
+          <h2 className={styles.title}>{title.text}</h2>
+        :
+        <></>
+      }
+
+      {introText?
+        <>
+          {introText.map( (para, idx) => 
+            <p key={idx}>{para}</p>
+          )}
+          <br />
+        </>
         :
         <></>
       }
 
       {media?
-        <img
-          src={media.address}
-          alt={media.altText}
-          height={media.height}
-          width={media.width}
-        />
+        <div className={styles.mediabox}>
+          <img
+            src={media.address}
+            alt={media.altText}
+            className={styles.media}
+          />
+        </div>
         :
         <></>
       }

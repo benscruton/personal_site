@@ -16,3 +16,14 @@ a .title{
     text-decoration-color: dodgerblue;
     text-decoration: underline;
 }
+
+.mediabox{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.media{
+    width: 100%;
+}
