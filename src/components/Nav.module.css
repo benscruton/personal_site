@@ -1,6 +1,7 @@
 .wrapper{
     display: flex;
-    background-color: #9C528B;
+    /* background-color: #9C528B; */
+    background-image: linear-gradient(#9C528B 70%, #6b375f);
     color: antiquewhite;
     justify-content: center;
     align-items: center;

@@ -1,10 +1,19 @@
 import React from "react";
 import styles from "./Box.module.css";
 import CSS from "csstype";
+import { Link } from "@reach/router";
+
+interface Media{
+  address: string,
+  altText: string,
+  height?: string,
+  width?: string
+}
 
 interface Props {
   title?: string,
-  mediaAddress?: string,
+  titleLink?: string,
+  media?: Media,
   paragraphs?: string[],
   height?: string,
   minHeight?: string,
@@ -14,20 +23,30 @@ interface Props {
   maxWidth?: string,
 }
 
-const Box: React.FC<Props> = ({title, mediaAddress, paragraphs, height, minHeight, maxHeight, width, minWidth, maxWidth}) => {
+const Box: React.FC<Props> = ({title, titleLink, media, paragraphs, height, minHeight, maxHeight, width, minWidth, maxWidth}) => {
 
   const boxStyle: CSS.Properties = {height, minHeight, maxHeight, width, minWidth, maxWidth};
 
   return (
     <div className={styles.wrapper} style={boxStyle}>
       {title? 
-        <h2>{title}</h2>
+        titleLink?
+          <Link to={titleLink}>
+            <h2 className={styles.title}>{title}</h2>
+          </Link>
+          :
+          <h2 className={styles.title}>{title}</h2>
         :
         <></>
       }
 
-      {mediaAddress?
-        <p>Link is {mediaAddress}</p>
+      {media?
+        <img
+          src={media.address}
+          alt={media.altText}
+          height={media.height}
+          width={media.width}
+        />
         :
         <></>
       }
