@@ -1,5 +1,11 @@
-.link{
-  color: dodgerblue;
-  text-decoration: underline;
-  text-decoration-color: dodgerblue;
+.center{
+    text-align: center;
+    margin: 5px;
 }
+
+.link{
+    color: dodgerblue;
+    text-decoration: underline;
+    text-decoration-color: dodgerblue;
+}
+

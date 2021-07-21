@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import Box from "../components/Box";
 import styles from "./Projects.module.css";
 import CSS from "csstype";
-import allProjects from "../components/projectInfo";
-import Project from "../components/interfaces/Project";
+import allProjects from "../projectInfo";
+import Project from "../interfaces/Project";
 
 interface Props {
   path: RouteComponentProps
@@ -13,8 +13,8 @@ interface Props {
 const Projects: React.FC<Props> = () => {
   const projectBoxDimensions: CSS.Properties = {
     width: "25%",
-    minWidth: "250px",
-    marginBottom: "10px",
+    minWidth: "275",
+    margin: "0px 5px 10px",
   }
 
   // const [projectList, setProjectList] = useState<Project[]>([]);
@@ -27,14 +27,12 @@ const Projects: React.FC<Props> = () => {
   return (
     <div>
       <h1 className={styles.title}>
-        Here are some of my projects:
+        Projects I've worked on:
       </h1>
 
       <div className={styles.outerflex}>
 
-        {/* {loaded? */}
-        {
-          allProjects.map( (project, idx) =>
+        {allProjects.map( (project, idx) =>
             <Box
               key={idx}
               title={project.title}
@@ -43,12 +41,12 @@ const Projects: React.FC<Props> = () => {
               media={{
                 address: project.spotlightMedia.address,
                 altText: project.spotlightMedia.altText,
-                width: "230px"
+              }}
+              footer={{
+                titleText: "Technologies:"
               }}
             />
           )
-          // : 
-          // <>Loading...</>
         }
 {/*         
         <Box

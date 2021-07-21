@@ -15,7 +15,7 @@ const App: React.FC = () => {
       <Background />
       <Intro />
       <Nav />
-      <Router>
+      <Router primary={false}>
         <Home path="/" />
         <About path="/about" />
         <Projects path="/projects" />
