@@ -1,5 +1,6 @@
 import Project from "../interfaces/Project";
 import dinnerGetterSpotlight from "../img/dinnerGetterSpotlight.png";
+import techIcons from "../img/techIcons";
 
 const dinnerGetter: Project = {
   id: "dinnerGetter",
@@ -16,7 +17,14 @@ const dinnerGetter: Project = {
   spotlightMedia: {
     address: dinnerGetterSpotlight,
     altText: "Screenshot from Dinner Getter"
-  }
+  },
+  technologies: [
+    techIcons.java,
+    techIcons.javascript,
+    techIcons.react,
+    techIcons.nodejs,
+    techIcons.materialize
+  ]
 };
 
 dinnerGetter.description.push({text: "hello there"});

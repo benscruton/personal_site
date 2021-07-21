@@ -71,6 +71,36 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
             {footer.titleText}
           </h3>
           
+          {footer.footerText && footer.footerText.length?
+            footer.footerText.map( (para, idx) =>
+              <p key={idx}>
+                {para}
+              </p>
+            )
+            :
+            <></>
+          }
+
+          {footer.listOfMedia && footer.listOfMedia.length?
+            <div className={styles.mediadisplay}>
+              {footer.listOfMedia.map( (med, idx) => 
+                <div className={styles.outerimghover}>
+                  <img
+                    key={idx}
+                    className={styles.displayitem}
+                    src={med.address}
+                    alt={med.altText}
+                  />                
+                  <p className={styles.imghovertext}>
+                    {med.altText}
+                  </p>
+                </div>
+              )}
+            </div>
+            :
+            <></>
+          }
+            
         </>
         :
         <></>

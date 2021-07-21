@@ -41,3 +41,35 @@ a .title{
     margin: 0 -10px 10px;
     box-shadow: rgba(0, 8, 0, 0.4) 0px 4px 4px;
 }
+
+.mediadisplay{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.outerimghover{
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    margin: 0 5px 5px;
+}
+
+.displayitem{
+    width: 100%;
+}
+
+.imghovertext{
+    position: absolute;
+    top: 50%;
+    background-color: #ccc;
+    border: 1px solid #161925;
+    visibility: hidden;
+}
+
+.outerimghover:hover .imghovertext{
+    visibility: visible;
+    opacity: 1;
+    z-index: 5;
+}

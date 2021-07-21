@@ -8,6 +8,7 @@ interface Project{
   description: ProjectDescriptor[],
   pitch: string[],
   spotlightMedia: Media,
+  technologies?: Media[]
 }
 
 export default Project;

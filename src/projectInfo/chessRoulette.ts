@@ -1,5 +1,6 @@
 import Project from "../interfaces/Project";
 import chessRouletteSpotlight from "../img/chessRouletteSpotlight.png";
+import techIcons from "../img/techIcons";
 
 const chessRoulette: Project = {
   id: "chessRoulette",
@@ -15,7 +16,17 @@ const chessRoulette: Project = {
   spotlightMedia: {
     address: chessRouletteSpotlight,
     altText: "Screenshot from Chess Roulette"
-  }
+  },
+  technologies: [
+    techIcons.javascript,
+    techIcons.nodejs,
+    techIcons.react,
+    techIcons.expressjs,
+    techIcons.mongodb,
+    techIcons.jwt,
+    techIcons.socket,
+    techIcons.bootstrap
+  ]
 };
 
 export default chessRoulette;

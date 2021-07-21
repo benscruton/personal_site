@@ -1,8 +1,7 @@
 interface Media{
   address: string,
   altText: string,
-  // height?: string,
-  // width?: string
+  text?: string
 }
 
 export default Media;
