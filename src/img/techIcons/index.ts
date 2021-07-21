@@ -1,11 +1,14 @@
 import Media from "../../interfaces/Media";
 
 import ajaxAddr from "./ajax.png";
+import auth0Addr from "./auth0.png";
+import axiosAddr from "./axios.webp";
+import bcryptAddr from "./bcrypt.png";
 import bootstrapAddr from "./bootstrap.png";
-import cssAddr from "./CSS.png";
+import cssAddr from "./css3.png";
 import djangoAddr from "./django.png";
 import expressjsAddr from "./expresswordlogo.png";
-import htmlAddr from "./HTML.png";
+import htmlAddr from "./html5.png";
 import javaAddr from "./java.png";
 import javascriptAddr from "./javascript.png";
 import jqueryAddr from "./jQuery.png";
@@ -17,12 +20,28 @@ import nodejsAddr from "./nodejs.svg";
 import pythonAddr from "./python.png";
 import reactAddr from "./react.png";
 import socketAddr from "./socket.png";
+import springAddr from "./spring.svg";
 import sqliteAddr from "./sqlite.png";
 
 const ajax: Media = {
   address: ajaxAddr,
   altText: "AJAX",
   text: "AJAX"
+};
+const auth0: Media = {
+  address: auth0Addr,
+  altText: "Auth0",
+  text: "Auth0"
+};
+const axios: Media = {
+  address: axiosAddr,
+  altText: "Axios",
+  text: "Axios"
+};
+const bcrypt: Media = {
+  address: bcryptAddr,
+  altText: "bcrypt",
+  text: "bcrypt"
 };
 const bootstrap: Media = {
   address: bootstrapAddr,
@@ -104,6 +123,11 @@ const socket: Media = {
   altText: "Socket.IO",
   text: "Socket.IO"
 };
+const spring: Media = {
+  address: springAddr,
+  altText: "Spring Boot",
+  text: "Spring Boot"
+};
 const sqlite: Media = {
   address: sqliteAddr,
   altText: "SQLite",
@@ -112,6 +136,9 @@ const sqlite: Media = {
 
 const icons = {
   ajax,
+  auth0,
+  axios,
+  bcrypt,
   bootstrap,
   css,
   django,
@@ -128,6 +155,7 @@ const icons = {
   python,
   react,
   socket,
+  spring,
   sqlite,
 };
 

@@ -1,6 +1,6 @@
 interface BoxTitle{
   text: string,
-  linkAddress?: string
+  linkAddress: string
 }
 
 export default BoxTitle;

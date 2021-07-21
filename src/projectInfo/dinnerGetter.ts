@@ -6,13 +6,12 @@ const dinnerGetter: Project = {
   id: "dinnerGetter",
   title: {
     text: "Dinner Getter",
-    linkAddress: "/projects/dinnerGetter"
+    linkAddress: "/projects/dinnergetter"
   },
   description: [],
   pitch: [
     "Not sure what you're doing for dinner tonight?  Already planned out every meal for the next two weeks?  Either way, Dinner Getter can help!",
-    "One portion of the app focuses on grocery shopping: users can create a categorized list of items you need, and reorganize their lists with drag-and-drop functionality.  Then, once at the store, flip the switch to enter \"Store Mode\" and simply tap items on the same list to cross them off.",
-    "The other side of the app allows users to enter ingredients they already have, then searches for recipes that call for these ingredients."
+    "One feature of the app helps users add items to a customizable, categorized shopping list, and then tap items on the list to cross them off.  Another helps match users with recipes based on ingredients that they already have in their pantry."
   ],
   spotlightMedia: {
     address: dinnerGetterSpotlight,
@@ -21,9 +20,14 @@ const dinnerGetter: Project = {
   technologies: [
     techIcons.java,
     techIcons.javascript,
+    techIcons.spring,
     techIcons.react,
     techIcons.nodejs,
-    techIcons.materialize
+    techIcons.auth0,
+    techIcons.axios,
+    techIcons.materialize,
+    techIcons.html,
+    techIcons.css,
   ]
 };
 

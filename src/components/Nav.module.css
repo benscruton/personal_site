@@ -23,9 +23,6 @@
     display: inline;
     padding: 10px;
     cursor: pointer;
-}
-
-.navtext{
     text-decoration: none;
     color: antiquewhite;
 }
@@ -35,8 +32,59 @@
     padding: 10px;
     border-radius: 10px;
     background-color: antiquewhite;
+    color: #9C528B;
 }
 
-.navlink:hover span{
+.navlinkwithsubmenu{
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    text-align: left;
+}
+
+.submenu p{
+    background-color: #9C528B;
+    text-align: left;
+    padding: 15px;
+}
+
+.submenu p a{
+    color: antiquewhite;
+    padding: 0;
+    margin-left: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu p:first-child{
+    background-image: linear-gradient(#9C528B 70%, #6b375f);
+    display: inline-block;
+}
+
+.submenu p:last-child{
+    background-image: linear-gradient(#9C528B 70%, #6b375f);
+    border-radius: 0 0 10px 10px;
+}
+
+.submenu p a:hover{
+    display: inline;
+    padding: 10px;
+    margin-left: 0px;
+    border-radius: 10px;
+    background-color: antiquewhite;
     color: #9C528B;
+}
+
+.navlinkwithsubmenu:hover .submenu{
+    display: block;
+    margin-top: -34px;
+    margin-left: -15px;
 }

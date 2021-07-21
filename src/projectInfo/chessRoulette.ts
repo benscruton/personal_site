@@ -6,12 +6,11 @@ const chessRoulette: Project = {
   id: "chessRoulette",
   title: {
     text: "Chess Roulette",
-    linkAddress: "/projects/chessRoulette"
+    linkAddress: "/projects/chessroulette"
   },
   description: [],
   pitch: [
-    "Chess Roulette is a platform where users can play chess against other users (or themselves).  Its integration with Socket.IO means that moves and other game updates are displayed in real time across browsers and devices.",
-    "Currently it supports the standard rules of chess, but its modular file structure is designed with the idea of adding chess variants later in development."
+    "Chess Roulette is a single-page application where users can play chess against other users (or themselves).  Its integration with Socket.IO allows moves and other game updates to be displayed in real time across browsers and devices. Options to play with variant rule sets coming soon!"
   ],
   spotlightMedia: {
     address: chessRouletteSpotlight,
@@ -19,12 +18,16 @@ const chessRoulette: Project = {
   },
   technologies: [
     techIcons.javascript,
-    techIcons.nodejs,
     techIcons.react,
+    techIcons.nodejs,
     techIcons.expressjs,
     techIcons.mongodb,
     techIcons.jwt,
     techIcons.socket,
+    techIcons.bcrypt,
+    techIcons.axios,
+    techIcons.html,
+    techIcons.css,
     techIcons.bootstrap
   ]
 };

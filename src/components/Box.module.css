@@ -11,12 +11,6 @@
     margin-bottom: 5px;
 }
 
-a .title{
-    color: dodgerblue;
-    text-decoration-color: dodgerblue;
-    text-decoration: underline;
-}
-
 .mediabox{
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px;
     text-align: center;
@@ -45,7 +39,7 @@ a .title{
 .mediadisplay{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -53,6 +47,7 @@ a .title{
     display: inline-block;
     position: relative;
     width: 20%;
+    max-width: 60px;
     margin: 0 5px 5px;
 }
 

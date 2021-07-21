@@ -21,9 +21,11 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
     <div className={styles.wrapper} style={dimensions}>
       {title? 
         title.linkAddress?
-          <Link to={title.linkAddress}>
-            <h2 className={styles.title}>{title.text}</h2>
-          </Link>
+          <h2 className={styles.title}>
+            <Link to={title.linkAddress}>
+            {title.text}
+            </Link>
+          </h2>
           :
           <h2 className={styles.title}>{title.text}</h2>
         :
@@ -67,9 +69,13 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
 
       {footer?
         <>
-          <h3 className={styles.footertitle}>
-            {footer.titleText}
-          </h3>
+          {footer.titleText?
+            <h3 className={styles.footertitle}>
+              {footer.titleText}
+            </h3>
+            : 
+            <></>
+          }
           
           {footer.footerText && footer.footerText.length?
             footer.footerText.map( (para, idx) =>
@@ -84,7 +90,7 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
           {footer.listOfMedia && footer.listOfMedia.length?
             <div className={styles.mediadisplay}>
               {footer.listOfMedia.map( (med, idx) => 
-                <div className={styles.outerimghover}>
+                <div className={styles.outerimghover} key={idx}>
                   <img
                     key={idx}
                     className={styles.displayitem}
