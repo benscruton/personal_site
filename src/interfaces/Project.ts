@@ -1,10 +1,10 @@
 import Media from "./Media";
 import ProjectDescriptor from "./ProjectDescriptor";
-import Title from "./Title";
+import BoxTitle from "./BoxTitle";
 
 interface Project{
   id: string,
-  title: Title,
+  title: BoxTitle,
   description: ProjectDescriptor[],
   pitch: string[],
   spotlightMedia: Media,

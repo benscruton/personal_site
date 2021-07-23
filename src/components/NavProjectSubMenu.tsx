@@ -18,8 +18,8 @@ const NavProjectSubMenu: React.FC<Props> = ({styles}) => {
       </p>
       {projects.map( (proj, idx) =>
         <p key={idx}>
-          <Link to={proj.title.linkAddress}>
-            {proj.title.text}
+          <Link to={proj.title.mainTitle.linkAddress || "/projects"}>
+            {proj.title.mainTitle.text}
           </Link>
         </p>
       )}

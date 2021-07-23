@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Nav.module.css";
-import { Link, navigate } from "@reach/router";
+import { navigate } from "@reach/router";
 import NavProjectSubMenu from "./NavProjectSubMenu";
 
 interface Props {}

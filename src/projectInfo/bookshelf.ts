@@ -5,8 +5,11 @@ import techIcons from "../img/techIcons";
 const bookshelf: Project = {
   id: "bookshelf",
   title: {
-    text: "Bookshelf",
-    linkAddress: "/projects/bookshelf"
+    mainTitle: {
+      text: "Bookshelf",
+      linkAddress: "/projects/bookshelf"
+    },
+    subtitle: []
   },
   description: [],
   pitch: [

@@ -5,8 +5,11 @@ import techIcons from "../img/techIcons";
 const dinnerGetter: Project = {
   id: "dinnerGetter",
   title: {
-    text: "Dinner Getter",
-    linkAddress: "/projects/dinnergetter"
+    mainTitle: {
+      text: "Dinner Getter",
+      linkAddress: "/projects/dinnergetter"
+    },
+    subtitle: []
   },
   description: [],
   pitch: [

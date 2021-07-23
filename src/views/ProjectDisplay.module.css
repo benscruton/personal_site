@@ -9,3 +9,13 @@
     text-decoration-color: dodgerblue;
 }
 
+.paragraph{
+    text-align: left;
+    margin: 10px auto 15px;
+    max-width: 800px;
+}
+
+.hr{
+    height: 2px;
+    margin: 20px 10%;
+}

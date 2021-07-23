@@ -5,8 +5,11 @@ import techIcons from "../img/techIcons";
 const chessRoulette: Project = {
   id: "chessRoulette",
   title: {
-    text: "Chess Roulette",
-    linkAddress: "/projects/chessroulette"
+    mainTitle: {
+      text: "Chess Roulette",
+      linkAddress: "/projects/chessroulette"
+    },
+    subtitle: []
   },
   description: [],
   pitch: [

@@ -9,7 +9,7 @@ interface Props{
 }
 
 const ProjectNotFound: React.FC<Props> = ({id, styles}) => {
-  const projectName = id? id[0].toUpperCase() + id.substring(1) : "";
+  const projectName: string = id? id[0].toUpperCase() + id.substring(1) : "";
 
   return (
     <>

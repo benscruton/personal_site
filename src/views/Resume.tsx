@@ -10,11 +10,11 @@ interface Props {
 
 const About: React.FC<Props> = ({windowWidth}) => {
 
-  const resumeWidth: number = Math.min(windowWidth, 870) - 20;
+  const resumeWidth: number = Math.min(windowWidth, 900) - 50;
 
   return (
     <div>
-      <h1>Résumé:</h1>
+      {/* <h1>Résumé:</h1> */}
       <p className={styles.linktext}>
         <a
           href={resume}

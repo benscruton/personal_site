@@ -3,11 +3,11 @@ import styles from "./Box.module.css";
 import CSS from "csstype";
 import { Link } from "@reach/router";
 import Media from "../interfaces/Media";
-import Title from "../interfaces/Title";
+import BoxTitle from "../interfaces/BoxTitle";
 import BoxFooter from "../interfaces/BoxFooter";
 
 interface Props {
-  title?: Title,
+  title?: BoxTitle,
   introText?: string[],
   media?: Media,
   paragraphs?: string[],
@@ -20,14 +20,39 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
   return (
     <div className={styles.wrapper} style={dimensions}>
       {title? 
-        title.linkAddress?
+        title.mainTitle.linkAddress?
           <h2 className={styles.title}>
-            <Link to={title.linkAddress}>
-            {title.text}
+            <Link to={title.mainTitle.linkAddress}>
+            {title.mainTitle.text}
             </Link>
           </h2>
           :
-          <h2 className={styles.title}>{title.text}</h2>
+          <h2 className={styles.title}>{title.mainTitle.text}</h2>
+        :
+        <></>
+      }
+
+      {title && title.subtitle && title.subtitle.length?
+        <p>
+          {title.subtitle.map( (st, idx) =>
+            <span key={idx}>
+              {st.linkAddress?
+                <Link to={st.linkAddress}>
+                  {st.text}
+                </Link>
+                :
+                <>{st.text}</>
+              }
+              
+              {/* separator: */}
+              {title.subtitle && idx < title.subtitle.length - 1?
+                <>&nbsp; | &nbsp;</>
+                :
+                <></>
+              }
+            </span>
+          )}
+        </p>
         :
         <></>
       }

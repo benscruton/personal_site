@@ -54,6 +54,8 @@
     background-color: #9C528B;
     text-align: left;
     padding: 15px;
+    border-left: 1px solid antiquewhite;
+    border-right: 1px solid antiquewhite;
 }
 
 .submenu p a{
@@ -67,11 +69,13 @@
 .submenu p:first-child{
     background-image: linear-gradient(#9C528B 70%, #6b375f);
     display: inline-block;
+    border: none;
 }
 
 .submenu p:last-child{
     background-image: linear-gradient(#9C528B 70%, #6b375f);
     border-radius: 0 0 10px 10px;
+    border-bottom: 1px solid antiquewhite;
 }
 
 .submenu p a:hover{
