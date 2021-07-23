@@ -2,11 +2,11 @@ import Media from "../../interfaces/Media";
 
 import ajaxAddr from "./ajax.png";
 import auth0Addr from "./auth0.png";
-import axiosAddr from "./axios.webp";
+import axiosAddr from "./axios.svg";
 import bcryptAddr from "./bcrypt.png";
 import bootstrapAddr from "./bootstrap.png";
 import cssAddr from "./css3.png";
-import djangoAddr from "./django.png";
+import djangoAddr from "./django.svg";
 import expressjsAddr from "./expresswordlogo.png";
 import htmlAddr from "./html5.png";
 import javaAddr from "./java.png";
@@ -134,7 +134,7 @@ const sqlite: Media = {
   text: "SQLite"
 };
 
-const icons = {
+const icons: {[key: string]: Media} = {
   ajax,
   auth0,
   axios,

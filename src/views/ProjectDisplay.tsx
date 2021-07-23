@@ -11,10 +11,11 @@ interface Props extends RouteComponentProps{
 }
 
 const ProjectDisplay: React.FC<Props> = ({id}) => {
-  let findThisOne: Project[] = allProjects.filter(
-    project => id && project.id.toLowerCase() === id.toLowerCase()
+
+  const findThisOne: Project[] = allProjects.filter(proj => 
+    id && proj.id.toLowerCase() === id.toLowerCase()
   );
-  let project: Project | null = (findThisOne.length? findThisOne[0] : null);
+  const project: Project | null = findThisOne[0] || null;
 
   return (
     <>

@@ -6,13 +6,14 @@ import CSS from "csstype";
 import allProjects from "../projectInfo";
 
 interface Props {
-  path: RouteComponentProps
+  path: RouteComponentProps,
+  windowWidth: number
 }
 
-const Projects: React.FC<Props> = () => {
+const Projects: React.FC<Props> = ({windowWidth}) => {
   const projectBoxDimensions: CSS.Properties = {
     width: "25%",
-    minWidth: "325px",
+    minWidth: `${Math.min(325, windowWidth - 25)}px`,
     maxWidth: "900px",
     margin: "0px 5px 10px",
   }

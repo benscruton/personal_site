@@ -9,37 +9,39 @@ const Nav: React.FC<Props> = () => {
 
   return (
     <div className={styles.wrapper}>
-      <ul className={styles.links}>
+      <div className={styles.navbarmain}>
+        <ul className={styles.links}>
 
-        <li
-          className={styles.navlink}
-          onClick={() => navigate("/")}
-        >
-          Home
-        </li>
-
-        <li
-          className={styles.navlink}
-          onClick={() => navigate("/about")}
-        >
-          Résumé 
-        </li>
-
-        <div className={styles.navlinkwithsubmenu}>
           <li
             className={styles.navlink}
-            onClick={() => navigate("/projects")}
+            onClick={() => navigate("/")}
           >
-            Projects
+            Home
           </li>
 
-          <NavProjectSubMenu
-            styles={styles}
-          />
-          
-        </div>
+          <li
+            className={styles.navlink}
+            onClick={() => navigate("/about")}
+          >
+            Résumé 
+          </li>
 
-      </ul>
+          <div className={styles.navlinkwithsubmenu}>
+            <li
+              className={styles.navlink}
+              onClick={() => navigate("/projects")}
+            >
+              Projects
+            </li>
+
+            <NavProjectSubMenu
+              styles={styles}
+            />
+            
+          </div>
+
+        </ul>
+      </div>
     </div>
   );
 }

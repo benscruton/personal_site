@@ -1,4 +1,13 @@
 .wrapper{
+    position: sticky;
+    top: 0;
+    z-index: 6;
+    width: 100%;
+    padding: 10px 0 1px;
+    background-color: antiquewhite;
+}
+
+.navbarmain{
     display: flex;
     /* background-color: #9C528B; */
     background-image: linear-gradient(#9C528B 70%, #6b375f);
@@ -7,7 +16,7 @@
     align-items: center;
     padding: 5px;
     border-radius: 10px;
-    margin: 0 auto 15px;
+    margin: 0 auto;
 }
 
 .links{
