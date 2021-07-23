@@ -5,6 +5,7 @@ import { Link } from "@reach/router";
 import Media from "../interfaces/Media";
 import BoxTitle from "../interfaces/BoxTitle";
 import BoxFooter from "../interfaces/BoxFooter";
+import SeparatedList from "./SeparatedList";
 
 interface Props {
   title?: BoxTitle,
@@ -34,24 +35,9 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
 
       {title && title.subtitle && title.subtitle.length?
         <p>
-          {title.subtitle.map( (st, idx) =>
-            <span key={idx}>
-              {st.linkAddress?
-                <Link to={st.linkAddress}>
-                  {st.text}
-                </Link>
-                :
-                <>{st.text}</>
-              }
-              
-              {/* separator: */}
-              {title.subtitle && idx < title.subtitle.length - 1?
-                <>&nbsp; | &nbsp;</>
-                :
-                <></>
-              }
-            </span>
-          )}
+          <SeparatedList
+            items={title.subtitle}
+          />
         </p>
         :
         <></>
