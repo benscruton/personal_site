@@ -5,10 +5,11 @@ import styles from "./Box.module.css";
 
 interface Props{
   media: Media,
-  dimensions?: CSS.Properties
+  dimensions?: CSS.Properties,
+  imageAdjustments?: CSS.Properties
 }
 
-const MediaBox: React.FC<Props> = ({media, dimensions}) => {
+const MediaBox: React.FC<Props> = ({media, dimensions, imageAdjustments}) => {
   return (
     <div
       className={styles.mediabox}
@@ -18,6 +19,7 @@ const MediaBox: React.FC<Props> = ({media, dimensions}) => {
         src={media.address}
         alt={media.altText}
         className={styles.media}
+        style={imageAdjustments}
       />
     </div>
   );

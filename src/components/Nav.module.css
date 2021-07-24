@@ -9,7 +9,6 @@
 
 .navbarmain{
     display: flex;
-    /* background-color: #9C528B; */
     background-image: linear-gradient(#9C528B 70%, #6b375f);
     color: antiquewhite;
     justify-content: center;
@@ -54,46 +53,48 @@
 .submenu{
     display: none;
     position: absolute;
+    top: 19px;
     min-width: 160px;
     z-index: 1;
     text-align: left;
 }
 
-.submenu p{
+.submenu li{
     background-color: #9C528B;
     text-align: left;
-    padding: 15px;
+    padding: 5px;
     border-left: 1px solid antiquewhite;
     border-right: 1px solid antiquewhite;
+    list-style-type: none;
 }
 
-.submenu p a{
+.submenu li a{
     color: antiquewhite;
-    padding: 0;
+    padding: 10px;
     margin-left: 10px;
     text-decoration: none;
-    display: block;
+    display: inline-block;
 }
 
-.submenu p:first-child{
+.submenu li:hover a{
+    background-color: antiquewhite;
+    color: #9C528B;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+
+.submenu li:first-child{
     background-image: linear-gradient(#9C528B 70%, #6b375f);
     display: inline-block;
     border: none;
 }
 
-.submenu p:last-child{
+.submenu li:last-child{
     background-image: linear-gradient(#9C528B 70%, #6b375f);
     border-radius: 0 0 10px 10px;
     border-bottom: 1px solid antiquewhite;
-}
-
-.submenu p a:hover{
-    display: inline;
-    padding: 10px;
-    margin-left: 0px;
-    border-radius: 10px;
-    background-color: antiquewhite;
-    color: #9C528B;
 }
 
 .navlinkwithsubmenu:hover .submenu{

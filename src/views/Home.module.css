@@ -1,0 +1,11 @@
+.flexaround{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.flexitem{
+  width: 100%;
+  max-width: 500px;
+}

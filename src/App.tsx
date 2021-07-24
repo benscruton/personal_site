@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <Intro />
       <Nav />
       <Router primary={false}>
-        <Home path="/" />
+        <Home path="/" windowWidth={windowWidth} />
         <Projects path="/projects" windowWidth={windowWidth}/>
         <ProjectDisplay path="/projects/:id" />
         <Resume path="/about" windowWidth={windowWidth}/>

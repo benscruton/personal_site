@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Nav.module.css";
-import { navigate } from "@reach/router";
+import { Link } from "@reach/router";
 import NavProjectSubMenu from "./NavProjectSubMenu";
 
 interface Props {}
@@ -10,29 +10,29 @@ const Nav: React.FC<Props> = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.navbarmain}>
-        <ul className={styles.links}>
+        <div className={styles.links}>
 
-          <li
+          <Link
             className={styles.navlink}
-            onClick={() => navigate("/")}
+            to="/"
           >
             Home
-          </li>
+          </Link>
 
-          <li
+          <Link
             className={styles.navlink}
-            onClick={() => navigate("/about")}
+            to="/about"
           >
             Résumé 
-          </li>
+          </Link>
 
           <div className={styles.navlinkwithsubmenu}>
-            <li
+            <Link
               className={styles.navlink}
-              onClick={() => navigate("/projects")}
+              to="/projects"
             >
               Projects
-            </li>
+            </Link>
 
             <NavProjectSubMenu
               styles={styles}
@@ -40,7 +40,7 @@ const Nav: React.FC<Props> = () => {
             
           </div>
 
-        </ul>
+        </div>
       </div>
     </div>
   );

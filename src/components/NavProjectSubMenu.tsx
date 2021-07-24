@@ -10,20 +10,22 @@ interface Props{
 
 const NavProjectSubMenu: React.FC<Props> = ({styles}) => {
   return (
-    <div className={styles.submenu}>
-      <p>
-        <Link to="/projects">
+    <ul className={styles.submenu}>
+      <li>
+        <Link
+          to="/projects"
+        >
           Projects
         </Link>
-      </p>
+      </li>
       {projects.map( (proj, idx) =>
-        <p key={idx}>
+        <li key={idx}>
           <Link to={proj.title.mainTitle.linkAddress || "/projects"}>
             {proj.title.mainTitle.text}
           </Link>
-        </p>
+        </li>
       )}
-    </div>
+    </ul>
   );
 }
 

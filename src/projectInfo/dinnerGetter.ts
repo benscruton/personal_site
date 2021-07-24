@@ -26,6 +26,7 @@ const dinnerGetter: Project = {
     techIcons.spring,
     techIcons.react,
     techIcons.nodejs,
+    techIcons.mysql,
     techIcons.auth0,
     techIcons.axios,
     techIcons.materialize,
