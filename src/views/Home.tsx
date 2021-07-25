@@ -22,7 +22,7 @@ const Home: React.FC<Props> = ({windowWidth}) => {
 
   const photoDimensions: CSS.Properties = {
     width: "40%",
-    minWidth: `${Math.min(200, windowWidth - 20)}px`,
+    minWidth: `${Math.min(250, windowWidth - 20)}px`,
     maxWidth: "400px",
     borderRadius: "25%",
     border: "10px solid #70A0AF",
@@ -32,16 +32,16 @@ const Home: React.FC<Props> = ({windowWidth}) => {
   return (
     <div>
       <h1>Welcome!</h1>
-      <h2>My name is Ben Scruton, and I am a full stack web developer.</h2>
+      <h2>My name is Ben Scruton, and I am a full stack developer.</h2>
       <div className={styles.flexaround}>
         <MediaBox
           media={photo}
           dimensions={photoDimensions}
           imageAdjustments={{borderRadius: "25%"}}
         />
-        <h3 className={styles.flexitem}>
+        <h4 className={styles.flexitem}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, qui. Labore, in id dolorem itaque at nostrum illum aspernatur suscipit esse aliquid officiis cupiditate explicabo dolores ipsum possimus minus mollitia?
-        </h3>
+        </h4>
       </div>
     </div>
   );
