@@ -3,13 +3,24 @@
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-}
-
-.flexitem{
-  width: 100%;
-  max-width: 500px;
+  max-width: 1350px;
+  margin: 10px auto;
 }
 
 h3.reg{
   font-weight: 300;
+}
+
+.hr{
+  height: 2px;
+  width: 80%;
+  max-width: 1080px;
+  margin: 15px auto;
+}
+
+.paracontainer p{
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px 10px;
+  text-align: left;
 }

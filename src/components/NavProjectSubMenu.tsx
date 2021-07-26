@@ -15,9 +15,14 @@ const NavProjectSubMenu: React.FC<Props> = ({styles}) => {
         <Link
           to="/projects"
         >
-          Projects
+          Projects Home
         </Link>
       </li>
+      {/* <li>
+        <Link to="/projects">
+          All Projects
+        </Link>
+      </li> */}
       {projects.map( (proj, idx) =>
         <li key={idx}>
           <Link to={proj.title.mainTitle.linkAddress || "/projects"}>
