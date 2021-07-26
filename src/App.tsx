@@ -29,7 +29,7 @@ const App: React.FC = () => {
         <Home path="/" windowWidth={windowWidth} />
         <Projects path="/projects" windowWidth={windowWidth}/>
         <ProjectDisplay path="/projects/:id" />
-        <Resume path="/about" windowWidth={windowWidth}/>
+        <Resume path="/resume" windowWidth={windowWidth}/>
       </Router>
     </div>
   );

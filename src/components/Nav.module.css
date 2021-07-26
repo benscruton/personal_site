@@ -54,12 +54,15 @@
 }
 
 .submenu{
-    display: none;
+    /* display: none; */
+    display: block;
     position: absolute;
     top: 19px;
     min-width: 160px;
     z-index: 1;
     text-align: left;
+    margin-top: -34px;
+    margin-left: -15px;
 }
 
 .submenu li{
@@ -102,8 +105,9 @@
     border-bottom: 1px solid antiquewhite;
 }
 
-.navlinkwithsubmenu:hover .submenu{
-    display: block;
-    margin-top: -34px;
-    margin-left: -15px;
+.submenu li:first-child:hover a{
+    /* background-image: linear-gradient(to top, red 80%, #f88); */
+    background-color: antiquewhite;
+    color: #f00;
+    font-weight: bold;
 }

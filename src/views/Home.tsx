@@ -34,7 +34,7 @@ const Home: React.FC<Props> = ({windowWidth}) => {
   };
 
   const textBoxDimensions: CSS.Properties = {
-    textAlign: "left",
+    textAlign: "justify",
     padding: "5px 10px"
   };
 
@@ -57,7 +57,7 @@ const Home: React.FC<Props> = ({windowWidth}) => {
         <div style={textContainerDimensions}>
           <h4 style={textBoxDimensions}>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            As a Ph.D. candidate, I honed my skills as a learner and a creative thinker.   I have decided to redirect these skills into software development.  To this end, I have learned to build applications in a variety of languages, including JavaScript, Python, and Java, and I am excited to continue to learn and grow as a developer!
+            As a Ph.D. candidate, I built experience as a learner and as a creative thinker.  Recently, I have decided to redirect these skills into software development.  To this end, I have learned to build applications in a variety of languages, including JavaScript, Python, and Java, and I am excited to continue to learn and grow as a developer!
           </h4>
           <h4 style={textBoxDimensions}>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

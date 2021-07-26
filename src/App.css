@@ -21,7 +21,11 @@ p, p a, h4{
 
 h4{
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1.25em;
+}
+
+p{
+  font-size: 1.1em;
 }
 
 a{

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Nav.module.css";
 import { Link } from "@reach/router";
 import NavProjectSubMenu from "./NavProjectSubMenu";
@@ -6,6 +6,12 @@ import NavProjectSubMenu from "./NavProjectSubMenu";
 interface Props {}
 
 const Nav: React.FC<Props> = () => {
+  const [showSubMenu, setShowSubMenu] = useState<boolean>(false);
+
+  const toggleSubMenu = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    setShowSubMenu(!showSubMenu);
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -21,22 +27,29 @@ const Nav: React.FC<Props> = () => {
 
           <Link
             className={styles.navlink}
-            to="/about"
+            to="/resume"
           >
             Résumé 
           </Link>
 
           <div className={styles.navlinkwithsubmenu}>
-            <Link
+            <a
               className={styles.navlink}
-              to="/projects"
+              href="/projects"
+              onClick={toggleSubMenu}
             >
-              Projects
-            </Link>
-
-            <NavProjectSubMenu
-              styles={styles}
-            />
+              Project Menu
+            </a>
+            
+            {showSubMenu?
+              <NavProjectSubMenu
+                styles={styles}
+                toggleMenu={toggleSubMenu}
+                hideMenu={() => setShowSubMenu(false)}
+              />
+              :
+              <></>
+            }
             
           </div>
 
