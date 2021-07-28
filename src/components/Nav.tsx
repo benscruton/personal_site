@@ -45,7 +45,8 @@ const Nav: React.FC<Props> = () => {
               onClick={toggleSubMenu}
               style={showSubMenu? transparentStyle : {}}
             >
-              ▸ Projects
+              {/* &#9656; Projects */}
+              {">"} Projects
             </a>
             
             {showSubMenu?

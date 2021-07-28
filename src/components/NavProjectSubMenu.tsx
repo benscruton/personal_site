@@ -17,7 +17,8 @@ const NavProjectSubMenu: React.FC<Props> = ({styles, toggleMenu, hideMenu}) => {
     >
       <li>
         <a href="/projects" onClick={toggleMenu}>
-        ▾ Projects
+        {/* &#9663; Projects */}
+        v Projects
         </a>
       </li>
 
