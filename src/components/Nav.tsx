@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Nav.module.css";
 import { Link } from "@reach/router";
 import NavProjectSubMenu from "./NavProjectSubMenu";
+import CSS from "csstype";
 
 interface Props {}
 
@@ -12,6 +13,11 @@ const Nav: React.FC<Props> = () => {
     e.preventDefault();
     setShowSubMenu(!showSubMenu);
   };
+
+  const transparentStyle: CSS.Properties = {
+    color: "#0000",
+    backgroundColor: "#0000"
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -37,8 +43,9 @@ const Nav: React.FC<Props> = () => {
               className={styles.navlink}
               href="/projects"
               onClick={toggleSubMenu}
+              style={showSubMenu? transparentStyle : {}}
             >
-              Project Menu
+              ▸ Projects
             </a>
             
             {showSubMenu?

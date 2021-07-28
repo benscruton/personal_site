@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteComponentProps } from "@reach/router";
+import { RouteComponentProps, Link } from "@reach/router";
 import styles from "./Home.module.css";
 import photoAddr from "../img/photo_cropped.png";
 import MediaBox from "../components/MediaBox";
@@ -74,13 +74,34 @@ const Home: React.FC<Props> = ({windowWidth}) => {
       >
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          My relationship with software development began in middle school, when I started tinkering around with HTML.  By the time I was in high school, I had learned enough to put together a very simple website.  I was in a folk trio playing a few gigs a month, so I built a website to display information like upcoming events and contact info.  I also logged on periodically to update the events and keep it (at least mostly) up to date.  It was just a few static HTML pages that linked to one another in a logical way, but it was functional enough for what we needed at the time.
+          My relationship with development began in middle school, when I started tinkering around with HTML.  By the time I was in high school, I had learned enough to put together a very simple website.  I was in a folk trio playing a few gigs a month, so I built a website to display information like upcoming events and contact info.  I also logged on periodically to update the events and keep it (at least mostly) up to date.  It was just a few static HTML pages that linked to one another in a logical way, but it was functional enough for what we needed at the time.
         </p>
 
         <p>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, ut! Possimus, explicabo aperiam tempora excepturi recusandae dicta esse quasi doloribus ut adipisci dolor, consectetur, placeat nesciunt debitis aut deserunt nihil.
+          In college, I focused primarily on other subject areas as a major in History of Art and Near Eastern Languages & Civilizations, but I maintained an interest in programming.  I took a semester-long introduction to computer programming course, where I learned the basics of Java.  I also continued to do some basic website maintenance: I played and sang in a folk group in college as well, and I was tasked with making periodic updates to the group's site, which was hosted on Heroku.  Between the programming course and making updates to the website, I got an introduction to navigating my files using a command line interface, and also found myself working with code a bit more intricate than simple HTML.
         </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          As a graduate student, I my focus was not directly on tech and programming, but nonetheless several of the skills I was building have applications in software development.  My field was Near Eastern Languages & Civilizations with a focus on Assyriology (the study of ancient Mesopotamia), which invovled a lot of study of ancient languages.  I spent the most time with Akkadian and Sumerian, but also took two semesters of Hebrew, participated in a small student-led group studying Hittite, and attended group workshops on both the Hittite and Hurrian languages in led by a visiting professor.  There is a lot of overlap between working with written languages and working with programming languages: the grammar, syntax, and vocabulary of a written language are in many ways parallel to the syntax and function names / keywords of programming languages.  The ability to work in multiple languages, quickly identifying what language you are reading, and understanding the patterns unique to that language are important to both programming and Assyriology.
+        </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          After leaving graduate school, I worked in the I.T. department at the Chicago Board of Elections during both the March primary and November general 2020 elections.  In this role, I got the opportunity to work much more directly with technology.  I was working with computers, networking equipment, and various other pieces of election technology; I was also working alongside people with programming backgrounds, and the work they were doing quite appealed to me.
+        </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Having enjoyed both dabbling in mostly self-taught web management and working in technology, I decided to take the next step and formally learn to write my own applications from the ground up.  At the start of 2021, I committed to learning full stack development at Coding Dojo.  As a student there, spent an intensive 14 weeks working on both front end and back end development, using a variety of languages and frameworks.
+        </p>
+
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Since graduating in April, I have continued to develop the projects that I started with my cohort-mates at Coding Dojo.  Recently I have focused primarily on <Link to="/projects/chessroulette">Chess Roulette</Link>, a MERN-stack application which is currently fully functional for playing chess with standard rules.  My next step on that project is to reorganize the code a bit and introduce variant rule sets.
+        </p>
+
       </div>
     </div>
   );

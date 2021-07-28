@@ -104,10 +104,3 @@
     border-radius: 0 0 10px 10px;
     border-bottom: 1px solid antiquewhite;
 }
-
-.submenu li:first-child:hover a{
-    /* background-image: linear-gradient(to top, red 80%, #f88); */
-    background-color: antiquewhite;
-    color: #f00;
-    font-weight: bold;
-}

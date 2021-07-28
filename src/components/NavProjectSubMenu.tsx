@@ -17,7 +17,7 @@ const NavProjectSubMenu: React.FC<Props> = ({styles, toggleMenu, hideMenu}) => {
     >
       <li>
         <a href="/projects" onClick={toggleMenu}>
-          Close Menu
+        ▾ Projects
         </a>
       </li>
 
