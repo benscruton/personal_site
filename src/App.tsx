@@ -28,7 +28,7 @@ const App: React.FC = () => {
       <Router primary={false}>
         <Home path="/" windowWidth={windowWidth} />
         <Projects path="/projects" windowWidth={windowWidth}/>
-        <ProjectDisplay path="/projects/:id" />
+        <ProjectDisplay path="/projects/:id" windowWidth={windowWidth}/>
         <Resume path="/resume" windowWidth={windowWidth}/>
       </Router>
     </div>

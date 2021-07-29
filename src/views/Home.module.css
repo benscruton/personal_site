@@ -24,3 +24,7 @@ h3.reg{
   padding: 5px 10px;
   text-align: justify;
 }
+
+.paracontainer h3{
+  margin: 25px 0 10px;
+}

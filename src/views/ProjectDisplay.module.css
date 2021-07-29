@@ -10,7 +10,7 @@
 }
 
 .paragraph{
-    text-align: left;
+    text-align: justify;
     margin: 10px auto 15px;
     max-width: 800px;
 }
@@ -19,3 +19,24 @@
     height: 2px;
     margin: 20px 10%;
 }
+
+.descriptor{
+    margin: 20px 10px;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 4px 8px;
+    border-radius: 5px;
+}
+
+.flexaround0{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexaround1{
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+

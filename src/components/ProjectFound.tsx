@@ -2,15 +2,28 @@ import React from "react";
 import Project from "../interfaces/Project";
 import MediaBox from "./MediaBox";
 import SeparatedList from "./SeparatedList";
+import CSS from "csstype";
 
 interface Props{
   project: Project,
   styles: {
     readonly [key: string]: string;
-  }
+  },
+  windowWidth: number
 }
 
-const ProjectFound: React.FC<Props> = ({project, styles}) => {
+const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
+
+  const demoMediaBoxStyle: CSS.Properties = {
+    width: `${windowWidth > 850? "40%" : `${Math.min(windowWidth - 20, 400)}px`}`
+  };
+
+  const demoDescriptorTextStyle: CSS.Properties = {
+    width: `${windowWidth > 850? "50%" : `${Math.min(windowWidth - 20, 600)}px`}`,
+    margin: "15px 0",
+    textAlign: "justify"
+  }
+
   return (
     <>
       <h1 className={styles.center}>
@@ -39,6 +52,31 @@ const ProjectFound: React.FC<Props> = ({project, styles}) => {
       />
 
       <hr className={styles.hr} />
+
+      {project.description.length ? 
+        <h3>Project Description:</h3>
+        :
+        <></>
+      }
+
+      {project.description.map( (desc, idx) =>
+        <div
+          key={idx}
+          className={`${styles[`flexaround${idx % 2}`]} ${styles.descriptor}`}
+        >
+          <p style={demoDescriptorTextStyle}>
+            {desc.text}
+          </p>
+          {desc.media?
+            <MediaBox
+              media={desc.media}
+              dimensions={demoMediaBoxStyle}
+            />
+            :
+            <></>
+          }
+        </div>
+      )}
     </>
   );
 };

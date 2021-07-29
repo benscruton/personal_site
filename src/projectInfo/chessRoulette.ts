@@ -35,4 +35,8 @@ const chessRoulette: Project = {
   ]
 };
 
+chessRoulette.description.push({
+  text: "Chess Roulette is a MERN stack application"
+});
+
 export default chessRoulette;

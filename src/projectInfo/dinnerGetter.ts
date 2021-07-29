@@ -35,6 +35,4 @@ const dinnerGetter: Project = {
   ]
 };
 
-dinnerGetter.description.push({text: "hello there"});
-
 export default dinnerGetter;

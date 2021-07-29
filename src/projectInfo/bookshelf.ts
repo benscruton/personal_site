@@ -1,6 +1,7 @@
 import Project from "../interfaces/Project";
 import bookshelfSpotlight from "../img/bookshelfSpotlight.png";
 import techIcons from "../img/techIcons";
+import demoImages from "../img/projectDemos/bookshelf";
 
 const bookshelf: Project = {
   id: "bookshelf",
@@ -29,5 +30,15 @@ const bookshelf: Project = {
     techIcons.materialize
   ]
 };
+
+bookshelf.description.push({
+  text: "When a user first navigates to the site, they will be greeted with this login page.  Users who have not yet joined can register for a new account, or returning users can log in using either their email or their username.  This page (like the rest of the project) features styling from the Materialize library; the login and register forms are displayed on Materialize cards.",
+  media: demoImages.login
+});
+
+bookshelf.description.push({
+  text: "This is what your friends' profiles look like, laiseuhc aliseuhcasieuhc alisuehcalis euhclaiseuhc laiseuhc laiseuhc laisuehc lasieuhc lasieuhc laseiuch alsieuc halseiuc h aseuc alseic galsieuc glaseiuygc akseuygc aseuc hlaseiucg aseuycg aselc gasekjcyg asueygc aseyg asecyg akesuygc aseuygc asecygasecuyaseg iuc ",
+  media: demoImages.friendProfile
+});
 
 export default bookshelf;

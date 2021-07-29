@@ -35,7 +35,6 @@
     cursor: pointer;
     text-decoration: none;
     color: antiquewhite;
-    /* font-weight: 400; */
 }
 
 .navlink:hover{
@@ -54,7 +53,6 @@
 }
 
 .submenu{
-    /* display: none; */
     display: block;
     position: absolute;
     top: 19px;
@@ -80,7 +78,6 @@
     margin-left: 10px;
     text-decoration: none;
     display: inline-block;
-    /* font-weight:400 */
 }
 
 .submenu li:hover a{

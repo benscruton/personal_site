@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./Intro.module.css";
 import gitHubLogo from "../img/GitHub-Mark-64px.png";
+// import gitHubLogoWhite from "../img/GitHub-Mark-Light-64px.png"
 import linkedInLogo from "../img/LinkedIn-Blue-72px.png";
+// import linkedInLogoWhite from "../img/LinkedIn-White-72px.png";
 import gmailLogo from "../img/gmail-icon.png";
 
 const Intro: React.FC = () => {

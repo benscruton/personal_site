@@ -7,10 +7,11 @@ import allProjects from "../projectInfo";
 import styles from "./ProjectDisplay.module.css";
 
 interface Props extends RouteComponentProps{
-  id?: string
+  id?: string,
+  windowWidth: number
 }
 
-const ProjectDisplay: React.FC<Props> = ({id}) => {
+const ProjectDisplay: React.FC<Props> = ({id, windowWidth}) => {
 
   const findThisOne: Project[] = allProjects.filter(proj => 
     id && proj.id.toLowerCase() === id.toLowerCase()
@@ -24,6 +25,7 @@ const ProjectDisplay: React.FC<Props> = ({id}) => {
           <ProjectFound
             styles={styles}
             project={project}
+            windowWidth={windowWidth}
           />
         </>
         :
