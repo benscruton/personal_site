@@ -15,12 +15,22 @@ const MediaBox: React.FC<Props> = ({media, dimensions, imageAdjustments}) => {
       className={styles.mediabox}
       style={dimensions}
     >
-      <img
-        src={media.address}
-        alt={media.altText}
-        className={styles.media}
-        style={imageAdjustments}
-      />
+      {media.videoType?
+        <video
+          controls
+          className={styles.media}
+          style={imageAdjustments}
+        >
+          <source src={media.address} type={media.videoType} />
+        </video>
+        :
+        <img
+          src={media.address}
+          alt={media.altText}
+          className={styles.media}
+          style={imageAdjustments}
+        />
+      }
     </div>
   );
 }

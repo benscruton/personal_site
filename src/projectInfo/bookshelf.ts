@@ -37,7 +37,8 @@ bookshelf.description.push({
 });
 
 bookshelf.description.push({
-  text: "When a new user joins, they are automatically assigned four shelves: \"Reading\", \"To Read\", \"Finished\", and \"Recommended\"."
+  text: "When a new user joins, they are automatically assigned four shelves: \"Reading\", \"To Read\", \"Finished\", and \"Recommended\".",
+  media: demoImages.recommend
 });
 
 bookshelf.description.push({

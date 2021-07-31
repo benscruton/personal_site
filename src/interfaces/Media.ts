@@ -2,7 +2,7 @@ interface Media{
   address: string,
   altText: string,
   text?: string,
-  video?: boolean
+  videoType?: string
 }
 
 export default Media;
