@@ -40,21 +40,21 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
         <></>
       }
 
+      <MediaBox
+        media={project.spotlightMedia}
+        dimensions={{maxWidth: "400px", margin: "0 auto"}}
+      />
+
       {project.pitch.map( (para, idx) => 
         <p key={idx} className={styles.paragraph}>
           {para}
         </p>
       )}
 
-      <MediaBox
-        media={project.spotlightMedia}
-        dimensions={{maxWidth: "400px", margin: "0 auto"}}
-      />
-
       <hr className={styles.hr} />
 
       {project.description.length ? 
-        <h3>Project Description:</h3>
+        <h3>Project Features:</h3>
         :
         <></>
       }
@@ -64,7 +64,15 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
           key={idx}
           className={`${styles[`flexaround${idx % 2}`]} ${styles.descriptor}`}
         >
-          <p style={demoDescriptorTextStyle}>
+          <p
+            style={desc.media? 
+              demoDescriptorTextStyle
+              :
+              {...demoDescriptorTextStyle,
+                width: "90%"
+              }
+            }
+          >
             {desc.text}
           </p>
           {desc.media?

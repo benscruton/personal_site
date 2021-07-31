@@ -32,13 +32,23 @@ const bookshelf: Project = {
 };
 
 bookshelf.description.push({
-  text: "When a user first navigates to the site, they will be greeted with this login page.  Users who have not yet joined can register for a new account, or returning users can log in using either their email or their username.  This page (like the rest of the project) features styling from the Materialize library; the login and register forms are displayed on Materialize cards.",
+  text: "When a user first navigates to the site, they will be greeted with this login page.  Users who have not yet joined can register for a new account, or returning users can log in using either their email or their username.",
   media: demoImages.login
+});
+
+bookshelf.description.push({
+  text: "When a new user joins, they are automatically assigned four shelves: \"Reading\", \"To Read\", \"Finished\", and \"Recommended\"."
 });
 
 bookshelf.description.push({
   text: "This is what your friends' profiles look like, laiseuhc aliseuhcasieuhc alisuehcalis euhclaiseuhc laiseuhc laiseuhc laisuehc lasieuhc lasieuhc laseiuch alsieuc halseiuc h aseuc alseic galsieuc glaseiuygc akseuygc aseuc hlaseiucg aseuycg aselc gasekjcyg asueygc aseyg asecyg akesuygc aseuygc asecygasecuyaseg iuc ",
   media: demoImages.friendProfile
 });
+
+bookshelf.description.push({
+  text: "Adding a book",
+});
+
+
 
 export default bookshelf;
