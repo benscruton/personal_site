@@ -21,7 +21,7 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
   const demoDescriptorTextStyle: CSS.Properties = {
     width: `${windowWidth > 850? "50%" : `${Math.min(windowWidth - 20, 600)}px`}`,
     margin: "15px 0",
-    textAlign: "justify"
+    textAlign: "left"
   }
 
   return (

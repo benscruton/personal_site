@@ -32,22 +32,73 @@ const bookshelf: Project = {
 };
 
 bookshelf.description.push({
-  text: "When a user first navigates to the site, they will be greeted with this login page.  Users who have not yet joined can register for a new account, or returning users can log in using either their email or their username.",
+  text: "Upon first navigating to the site, users will be greeted with this login page.  New users can register for an account, or returning users can log in with their email or username.  Passwords are stored securely using bcrypt hashing.",
   media: demoImages.login
 });
 
 bookshelf.description.push({
-  text: "When a new user joins, they are automatically assigned four shelves: \"Reading\", \"To Read\", \"Finished\", and \"Recommended\".",
-  media: demoImages.recommend
+  text: "All pages on the site are size responsive, so it can be comfortably used on devices with a range of widths.  This includes a collapsing menu for mobile (or other narrow-screened) users.",
+  media: demoImages.responsive
 });
 
 bookshelf.description.push({
-  text: "This is what your friends' profiles look like, laiseuhc aliseuhcasieuhc alisuehcalis euhclaiseuhc laiseuhc laiseuhc laisuehc lasieuhc lasieuhc laseiuch alsieuc halseiuc h aseuc alseic galsieuc glaseiuygc akseuygc aseuc hlaseiucg aseuycg aselc gasekjcyg asueygc aseyg asecyg akesuygc aseuygc asecygasecuyaseg iuc ",
+  text: "When a new user joins, they are automatically assigned four shelves: \"Reading\", \"To Read\", \"Finished\", and \"Recommended\".",
+  media: demoImages.newUserShelves
+});
+
+bookshelf.description.push({
+  text: "In addition to these four shelves, users can add their own custom shelves.  Once added, these custom shelves can also be renamed or deleted.",
+  media: demoImages.customizeShelves
+});
+
+bookshelf.description.push({
+  text: "Users can search for books and add them to their shelves.  Searches can be conducted based on the title, author's first or last name, ISBN, or any combination of these.",
+  media: demoImages.addBookToShelf
+});
+
+bookshelf.description.push({
+  text: "If the book doesn't already exist in the database, there is a form that allows users to add a new book.",
+  media: demoImages.addBookToDatabase
+});
+
+bookshelf.description.push({
+  text: "Users can also add other users as friends.  The \"Friends\" link at the top directs the user to this page, where they can view friends they have already added, search among their friends, and also search for users to add as friends (by first name, last name, username, email, or any combination).",
+  media: demoImages.friendsPage
+});
+
+bookshelf.description.push({
+  text: "Each user also has their own profile page, where they can see their shelves, friends, and wall all in one place.",
+  media: demoImages.yourProfile
+});
+
+bookshelf.description.push({
+  text: "When a user visits the profile of a user who is not already a friend, they can see some limited information: their name, and any mutual friends.",
+  media: demoImages.notFriendProfile
+});
+
+bookshelf.description.push({
+  text: "When a user receives a friend request from another user, a notification will appear at the top left of any page they visit.  These can be accepted or ignored at any time.",
+  media: demoImages.friendRequests
+});
+
+bookshelf.description.push({
+  text: "Once a user's friend request has been accepted, they can see all of that user's information on their profile page, including their shelves and their wall.",
   media: demoImages.friendProfile
 });
 
 bookshelf.description.push({
-  text: "Adding a book",
+  text: "In addition to adding books to their own shelves, users can also add books to the \"Recommended\" shelf of any of their friends.",
+  media: demoImages.recommend
+});
+
+bookshelf.description.push({
+  text: "Each user also has a wall, where they can exchange comments with their friends.  Users have the option to delete their posts and comments, as well as any posts or comments on their own wall (even from other users).",
+  media: demoImages.wall
+});
+
+bookshelf.description.push({
+  text: "After a user adds a book to their \"Finished\" shelf, they will receive a prompt asking if they'd like to post about it to their wall.  This includes a brief stock message, which the user can edit as they like or post as-is.",
+  media: demoImages.finishedPrompt
 });
 
 
