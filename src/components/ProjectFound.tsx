@@ -59,32 +59,34 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
         <></>
       }
 
-      {project.description.map( (desc, idx) =>
-        <div
-          key={idx}
-          className={`${styles[`flexaround${idx % 2}`]} ${styles.descriptor}`}
-        >
-          <p
-            style={desc.media? 
-              demoDescriptorTextStyle
-              :
-              {...demoDescriptorTextStyle,
-                width: "90%"
-              }
-            }
+      <div className={styles.descriptorcontainer}>
+        {project.description.map( (desc, idx) =>
+          <div
+            key={idx}
+            className={`${styles[`flexaround${idx % 2}`]} ${styles.descriptor}`}
           >
-            {desc.text}
-          </p>
-          {desc.media?
-            <MediaBox
-              media={desc.media}
-              dimensions={demoMediaBoxStyle}
-            />
-            :
-            <></>
-          }
-        </div>
-      )}
+            <p
+              style={desc.media? 
+                demoDescriptorTextStyle
+                :
+                {...demoDescriptorTextStyle,
+                  width: "90%"
+                }
+              }
+            >
+              {desc.text}
+            </p>
+            {desc.media?
+              <MediaBox
+                media={desc.media}
+                dimensions={demoMediaBoxStyle}
+              />
+              :
+              <></>
+            }
+          </div>
+        )}
+      </div>
     </>
   );
 };

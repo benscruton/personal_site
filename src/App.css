@@ -30,6 +30,7 @@ a{
   color: dodgerblue;
   text-decoration: underline;
   text-decoration-color: dodgerblue;
+  font-size: inherit;
 }
 
 .App {

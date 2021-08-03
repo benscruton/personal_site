@@ -103,7 +103,7 @@ const searchUser: Media = {
   videoType: "video/webm"
 };
 
-export default {
+const images: {readonly [key: string]: Media} = {
   login,
   responsive,
   newUserShelves,
@@ -121,3 +121,5 @@ export default {
   removeBook,
   searchUser,
 };
+
+export default images;

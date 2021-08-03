@@ -1,3 +1,7 @@
-// import Media from "../../../interfaces/Media";
+import Media from "../../../interfaces/Media";
 
-export default {};
+const images: {readonly [key: string]: Media} = {
+
+};
+
+export default images;

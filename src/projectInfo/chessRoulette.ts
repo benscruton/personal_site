@@ -1,6 +1,7 @@
 import Project from "../interfaces/Project";
 import chessRouletteSpotlight from "../img/chessRouletteSpotlight.png";
 import techIcons from "../img/techIcons";
+import demoImages from "../img/projectDemos/chessRoulette";
 
 const chessRoulette: Project = {
   id: "chessRoulette",
@@ -31,12 +32,13 @@ const chessRoulette: Project = {
     techIcons.axios,
     techIcons.html,
     techIcons.css,
-    techIcons.bootstrap
+    techIcons.bootstrap,
   ]
 };
 
 chessRoulette.description.push({
-  text: "Chess Roulette is a MERN stack application"
+  text: "On first navigating to Chess Roulette, users will find this login and registration page.  Here they can set up a new account, or log in using their username or email address.  Passwords are stored securely with bcrypt hashing.",
+  media: demoImages.login
 });
 
 export default chessRoulette;
