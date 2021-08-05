@@ -8,6 +8,7 @@ import loginAddr from "./login.png";
 import moveLogAddr from "./moveLog.ogg";
 import movingInCheckAddr from "./movingInCheck.ogg";
 import pawnPromotionAddr from "./pawnPromotion.ogg";
+import offerDrawResignAddr from "./offerDrawResign.ogg";
 import Media from "../../../interfaces/Media";
 
 const login: Media = {
@@ -68,6 +69,12 @@ const changeSprite: Media = {
   videoType: "video/ogg"
 };
 
+const offerDrawResign: Media = {
+  address: offerDrawResignAddr,
+  altText: "Demo of draw-offering and resigning system",
+  videoType: "video/ogg"
+};
+
 const images: {readonly [key: string]: Media} = {
   login,
   editUser,
@@ -78,7 +85,8 @@ const images: {readonly [key: string]: Media} = {
   movingInCheck,
   pawnPromotion,
   moveLog,
-  changeSprite
+  changeSprite,
+  offerDrawResign
 };
 
 export default images;

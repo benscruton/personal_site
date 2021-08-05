@@ -21,7 +21,7 @@ const Projects: React.FC<Props> = ({windowWidth}) => {
   return (
     <div>
       <h1 className={styles.title}>
-        Projects I've worked on:
+        My projects:
       </h1>
 
       <div className={styles.outerflex}>
