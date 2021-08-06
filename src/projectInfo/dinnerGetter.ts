@@ -1,6 +1,7 @@
 import Project from "../interfaces/Project";
 import dinnerGetterSpotlight from "../img/dinnerGetterSpotlight.png";
 import techIcons from "../img/techIcons";
+import demoImages from "../img/projectDemos/dinnerGetter";
 
 const dinnerGetter: Project = {
   id: "dinnerGetter",
@@ -34,5 +35,10 @@ const dinnerGetter: Project = {
     techIcons.css,
   ]
 };
+
+dinnerGetter.description.push({
+  text: "Reorganize your list with drag-and-drop functionality",
+  media: demoImages.dragAndDrop
+});
 
 export default dinnerGetter;
