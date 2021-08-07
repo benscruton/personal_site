@@ -7,20 +7,21 @@ import allProjects from "../projectInfo";
 
 interface Props {
   path: RouteComponentProps,
-  windowWidth: number
+  windowWidth: number,
+  darkMode: boolean
 }
 
-const Projects: React.FC<Props> = ({windowWidth}) => {
+const Projects: React.FC<Props> = ({windowWidth, darkMode}) => {
   const projectBoxDimensions: CSS.Properties = {
     width: "25%",
     minWidth: `${Math.min(325, windowWidth - 25)}px`,
     maxWidth: "900px",
-    margin: "0px 5px 10px",
+    margin: "0px 5px 15px",
   }
 
   return (
     <div>
-      <h1 className={styles.title}>
+      <h1 className={`${styles.title}${darkMode ? " light-text" : ""}`}>
         My projects:
       </h1>
 
@@ -40,6 +41,7 @@ const Projects: React.FC<Props> = ({windowWidth}) => {
               titleText: "Technologies:",
               listOfMedia: project.technologies
             }}
+            darkMode={darkMode}
           />
         )}
       </div>

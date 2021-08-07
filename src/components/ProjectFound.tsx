@@ -9,10 +9,11 @@ interface Props{
   styles: {
     readonly [key: string]: string;
   },
-  windowWidth: number
+  windowWidth: number,
+  darkMode: boolean
 }
 
-const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
+const ProjectFound: React.FC<Props> = ({project, styles, windowWidth, darkMode}) => {
 
   const demoMediaBoxStyle: CSS.Properties = {
     width: `${windowWidth > 850? "40%" : `${Math.min(windowWidth - 20, 400)}px`}`
@@ -26,12 +27,12 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
 
   return (
     <>
-      <h1 className={styles.center}>
+      <h1 className={`${styles.center}${darkMode ? " light-text" : ""}`}>
         {project.title.mainTitle.text}
       </h1>
 
       {project.title.subtitle?
-        <h3 className={styles.subtitle}>
+        <h3 className={darkMode ? styles.subtitledark : styles.subtitle}>
           <SeparatedList
             items={project.title.subtitle}
           />
@@ -46,7 +47,7 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
       />
 
       {project.pitch.map( (para, idx) => 
-        <p key={idx} className={styles.paragraph}>
+        <p key={idx} className={`${styles.paragraph}${darkMode ? " light-text" : ""}`}>
           {para}
         </p>
       )}
@@ -54,7 +55,7 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
       <hr className={styles.hr} />
 
       {project.description.length ? 
-        <h3>Project Features:</h3>
+        <h3 className={darkMode ? "light-text" : ""}>Project Features:</h3>
         :
         <></>
       }
@@ -63,9 +64,13 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
         {project.description.map( (desc, idx) =>
           <div
             key={idx}
-            className={`${styles[`flexaround${idx % 2}`]} ${styles.descriptor}`}
+            className={`
+              ${styles[`flexaround${idx % 2}`]}
+              ${darkMode ? styles.descriptordark : styles.descriptor}
+            `}
           >
             <p
+              className={darkMode ? "light-text" : ""}
               style={desc.media? 
                 demoDescriptorTextStyle
                 :

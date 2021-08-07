@@ -6,14 +6,15 @@ interface Props{
   styles: {
     readonly [key: string]: string;
   },
+  darkMode: boolean,
   toggleMenu: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void,
   hideMenu: () => void
 }
 
-const NavProjectSubMenu: React.FC<Props> = ({styles, toggleMenu, hideMenu}) => {
+const NavProjectSubMenu: React.FC<Props> = ({styles, darkMode, toggleMenu, hideMenu}) => {
   return (
     <ul
-      className={styles.submenu}
+      className={darkMode ? styles.submenudark : styles.submenu}
     >
       <li>
         <a href="/projects" onClick={toggleMenu}>

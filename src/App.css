@@ -3,7 +3,7 @@
   padding: 0px;
   vertical-align: top;
   box-sizing: border-box;
-  color: #161925;
+  color: #000;
   font-family: 'Inter', sans-serif;
 }
 
@@ -16,14 +16,18 @@ h2, h3{
 }
 
 h4{
-  font-family: "STIX Two Math", sans-serif;
+  font-family: "STIX Two Math", serif;
   font-weight: 400;
   font-size: 1.25em;
 }
 
-p, p a{
-  font-family: "STIX Two Math", sans-serif;
+p{
+  font-family: "STIX Two Math", serif;
   font-size: 1.1em;
+}
+
+p a{
+  font-family: "STIX Two Math", serif;
 }
 
 a{
@@ -31,6 +35,11 @@ a{
   text-decoration: underline;
   text-decoration-color: dodgerblue;
   font-size: inherit;
+}
+
+.light-text{
+  /* color: #70A0AF; */
+  color: antiquewhite;
 }
 
 .App {

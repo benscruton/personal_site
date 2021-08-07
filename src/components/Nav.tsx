@@ -4,9 +4,11 @@ import { Link } from "@reach/router";
 import NavProjectSubMenu from "./NavProjectSubMenu";
 import CSS from "csstype";
 
-interface Props {}
+interface Props {
+  darkMode: boolean
+}
 
-const Nav: React.FC<Props> = () => {
+const Nav: React.FC<Props> = ({darkMode}) => {
   const [showSubMenu, setShowSubMenu] = useState<boolean>(false);
 
   const toggleSubMenu = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -20,19 +22,19 @@ const Nav: React.FC<Props> = () => {
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className={darkMode ? styles.wrapperdark : styles.wrapper}>
       <div className={styles.navbarmain}>
         <div className={styles.links}>
 
           <Link
-            className={styles.navlink}
+            className={darkMode ? styles.navlinkdark : styles.navlink}
             to="/"
           >
             Home
           </Link>
 
           <Link
-            className={styles.navlink}
+            className={darkMode ? styles.navlinkdark : styles.navlink}
             to="/resume"
           >
             Résumé 
@@ -40,7 +42,7 @@ const Nav: React.FC<Props> = () => {
 
           <div className={styles.navlinkwithsubmenu}>
             <a
-              className={styles.navlink}
+              className={darkMode ? styles.navlinkdark : styles.navlink}
               href="/projects"
               onClick={toggleSubMenu}
               style={showSubMenu? transparentStyle : {}}
@@ -52,6 +54,7 @@ const Nav: React.FC<Props> = () => {
             {showSubMenu?
               <NavProjectSubMenu
                 styles={styles}
+                darkMode={darkMode}
                 toggleMenu={toggleSubMenu}
                 hideMenu={() => setShowSubMenu(false)}
               />

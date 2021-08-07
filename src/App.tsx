@@ -10,7 +10,8 @@ import './App.css';
 import {Router} from "@reach/router";
 
 const App: React.FC = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
 
   const findWindowWidth = () => {
     setWindowWidth(window.innerWidth);
@@ -22,14 +23,14 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <Background />
-      <Intro />
-      <Nav />
+      <Background darkMode={darkMode} />
+      <Intro darkMode={darkMode} />
+      <Nav darkMode={darkMode} />
       <Router primary={false}>
-        <Home path="/" windowWidth={windowWidth} />
-        <Projects path="/projects" windowWidth={windowWidth}/>
-        <ProjectDisplay path="/projects/:id" windowWidth={windowWidth}/>
+        <Home path="/" windowWidth={windowWidth} darkMode={darkMode}/>
         <Resume path="/resume" windowWidth={windowWidth}/>
+        <Projects path="/projects" windowWidth={windowWidth} darkMode={darkMode} />
+        <ProjectDisplay path="/projects/:id" windowWidth={windowWidth} darkMode={darkMode} />
       </Router>
     </div>
   );

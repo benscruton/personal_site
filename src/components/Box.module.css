@@ -2,7 +2,15 @@
     display: inline-block;
     background-color: white;
     padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.4) 2px 4px 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 4px 10px;
+    border-radius: 5px;
+}
+
+.wrapperdark{
+    display: inline-block;
+    background-color: #222;
+    padding: 10px;
+    box-shadow: rgba(255, 255, 255, 0.6) 2px 4px 10px;
     border-radius: 5px;
 }
 
@@ -11,9 +19,21 @@
     margin-bottom: 5px;
 }
 
-.subtitles span a{
+.titledark{
+    text-align: center;
+    margin-bottom: 5px;
+    color: antiquewhite;
+}
+
+.subtitles span, .subtitles span a, .subtitlesdark span a{
     font-family: 'Inter', sans-serif;
     font-size: 1em;
+}
+
+.subtitlesdark span{
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    color: antiquewhite;
 }
 
 .mediabox{
@@ -42,6 +62,16 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 4px;
 }
 
+.footerbody{
+    background-color: #fff;
+}
+
+.footerbodydark{
+    background-color: #555;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 .mediadisplay{
     display: flex;
     flex-wrap: wrap;
@@ -65,14 +95,25 @@
     position: absolute;
     top: 50%;
     background-color: antiquewhite;
-    color: #161925;
+    color: #000;
     padding: 5px;
     border: 2px solid #70A0AF;
     border-radius: 5px;
     visibility: hidden;
 }
 
-.outerimghover:hover .imghovertext{
+.imghovertextdark{
+    position: absolute;
+    top: 50%;
+    background-color: #000;
+    color: #70A0AF;
+    padding: 5px;
+    border: 2px solid #70A0AF;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.outerimghover:hover .imghovertext, .outerimghover:hover .imghovertextdark{
     visibility: visible;
     z-index: 5;
 }

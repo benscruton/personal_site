@@ -13,28 +13,34 @@ interface Props {
   media?: Media,
   paragraphs?: string[],
   dimensions?: CSS.Properties,
-  footer?: BoxFooter
+  footer?: BoxFooter,
+  darkMode?: boolean
 }
 
-const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, footer}) => {
+const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, footer, darkMode}) => {
 
   return (
-    <div className={styles.wrapper} style={dimensions}>
+    <div className={darkMode ? styles.wrapperdark : styles.wrapper} style={dimensions}>
+
+      {/* TITLE */}
       {title? 
         title.mainTitle.linkAddress?
-          <h2 className={styles.title}>
+          <h2 className={darkMode ? styles.titledark : styles.title}>
             <Link to={title.mainTitle.linkAddress}>
             {title.mainTitle.text}
             </Link>
           </h2>
           :
-          <h2 className={styles.title}>{title.mainTitle.text}</h2>
+          <h2 className={darkMode ? styles.titledark : styles.title}>
+            {title.mainTitle.text}
+          </h2>
         :
         <></>
       }
 
+      {/* SUBTITLE */}
       {title && title.subtitle && title.subtitle.length?
-        <p className={styles.subtitles}>
+        <p className={darkMode ? styles.subtitlesdark : styles.subtitles}>
           <SeparatedList
             items={title.subtitle}
           />
@@ -43,10 +49,14 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
         <></>
       }
 
+      {/* PRE-IMAGE TEXT */}
       {introText?
         <>
           {introText.map( (para, idx) => 
-            <p key={idx} className={styles.paragraph}>
+            <p
+              key={idx}
+              className={`${styles.paragraph}${darkMode ? " light-text" : ""}`}
+            >
               {para}
             </p>
           )}
@@ -56,6 +66,7 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
         <></>
       }
 
+      {/* IMAGE */}
       {media?
         <div className={styles.mediabox}>
           <img
@@ -68,9 +79,13 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
         <></>
       }
 
+      {/* POST-IMAGE TEXT */}
       {paragraphs && paragraphs.length? 
         paragraphs.map( (para, idx) => 
-          <p key={idx} className={styles.paragraph}>
+          <p 
+            key={idx}
+            className={`${styles.paragraph}${darkMode ? " light-text" : ""}`}
+          >
             {para}
           </p>
         )
@@ -78,6 +93,7 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
         <></>
       }
 
+      {/* FOOTER */}
       {footer?
         <>
           {footer.titleText?
@@ -88,36 +104,37 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
             <></>
           }
           
-          {footer.footerText && footer.footerText.length?
-            footer.footerText.map( (para, idx) =>
-              <p key={idx}>
-                {para}
-              </p>
-            )
-            :
-            <></>
-          }
+          <div className={darkMode ? styles.footerbodydark : styles.footerbody}>
+            {footer.footerText && footer.footerText.length?
+              footer.footerText.map( (para, idx) =>
+                <p key={idx}>
+                  {para}
+                </p>
+              )
+              :
+              <></>
+            }
 
-          {footer.listOfMedia && footer.listOfMedia.length?
-            <div className={styles.mediadisplay}>
-              {footer.listOfMedia.map( (med, idx) => 
-                <div className={styles.outerimghover} key={idx}>
-                  <img
-                    key={idx}
-                    className={styles.displayitem}
-                    src={med.address}
-                    alt={med.altText}
-                  />                
-                  <p className={styles.imghovertext}>
-                    {med.altText}
-                  </p>
-                </div>
-              )}
-            </div>
-            :
-            <></>
-          }
-            
+            {footer.listOfMedia && footer.listOfMedia.length?
+              <div className={styles.mediadisplay}>
+                {footer.listOfMedia.map( (med, idx) => 
+                  <div className={styles.outerimghover} key={idx}>
+                    <img
+                      key={idx}
+                      className={styles.displayitem}
+                      src={med.address}
+                      alt={med.altText}
+                    />                
+                    <p className={darkMode ? styles.imghovertextdark : styles.imghovertext}>
+                      {med.altText}
+                    </p>
+                  </div>
+                )}
+              </div>
+              :
+              <></>
+            }
+          </div>
         </>
         :
         <></>
