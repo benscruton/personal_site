@@ -31,7 +31,7 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth}) => {
       </h1>
 
       {project.title.subtitle?
-        <h3>
+        <h3 className={styles.subtitle}>
           <SeparatedList
             items={project.title.subtitle}
           />

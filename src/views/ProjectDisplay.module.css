@@ -15,6 +15,10 @@
     max-width: 800px;
 }
 
+.subtitle{
+    margin-bottom: 15px;
+}
+
 .hr{
     height: 2px;
     margin: 20px 10%;

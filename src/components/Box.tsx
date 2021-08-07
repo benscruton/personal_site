@@ -34,7 +34,7 @@ const Box: React.FC<Props> = ({title, introText, media, paragraphs, dimensions, 
       }
 
       {title && title.subtitle && title.subtitle.length?
-        <p>
+        <p className={styles.subtitles}>
           <SeparatedList
             items={title.subtitle}
           />

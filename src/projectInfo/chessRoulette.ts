@@ -10,7 +10,13 @@ const chessRoulette: Project = {
       text: "Chess Roulette",
       linkAddress: "/projects/chessroulette"
     },
-    subtitle: []
+    subtitle: [
+      {
+        text: "GitHub",
+        linkAddress: "https://github.com/benscruton/chess_roulette",
+        external: true
+      }
+    ]
   },
   description: [],
   pitch: [

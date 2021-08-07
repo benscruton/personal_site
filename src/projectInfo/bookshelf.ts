@@ -10,7 +10,13 @@ const bookshelf: Project = {
       text: "Bookshelf",
       linkAddress: "/projects/bookshelf"
     },
-    subtitle: []
+    subtitle: [
+      {
+        text: "GitHub",
+        linkAddress: "https://github.com/benscruton/books_project",
+        external: true
+      }
+    ]
   },
   description: [],
   pitch: [

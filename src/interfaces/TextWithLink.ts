@@ -1,6 +1,7 @@
 interface TextWithLink{
   text: string,
-  linkAddress?: string
+  linkAddress?: string,
+  external?: boolean
 }
 
 export default TextWithLink;

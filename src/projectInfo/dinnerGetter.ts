@@ -10,7 +10,13 @@ const dinnerGetter: Project = {
       text: "Dinner Getter",
       linkAddress: "/projects/dinnergetter"
     },
-    subtitle: []
+    subtitle: [
+      {
+        text: "GitHub",
+        linkAddress: "https://github.com/benscruton/dinnergetter",
+        external: true
+      }
+    ]
   },
   description: [],
   pitch: [
