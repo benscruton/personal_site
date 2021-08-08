@@ -2,6 +2,7 @@ import React from "react";
 import { RouteComponentProps, Link } from "@reach/router";
 import styles from "./Home.module.css";
 import photoAddr from "../img/photo_cropped.png";
+import darkPhotoAddr from "../img/photo_cropped_dark.png";
 import MediaBox from "../components/MediaBox";
 import Media from "../interfaces/Media";
 import CSS from "csstype";
@@ -16,7 +17,7 @@ interface Props {
 
 const Home: React.FC<Props> = ({windowWidth, darkMode}) => {
   const photo: Media = {
-    address: photoAddr,
+    address: darkMode ? darkPhotoAddr : photoAddr,
     altText: "A photo of me"
   }
 
@@ -58,6 +59,7 @@ const Home: React.FC<Props> = ({windowWidth, darkMode}) => {
           media={photo}
           dimensions={photoDimensions}
           imageAdjustments={{borderRadius: "24%"}}
+          darkMode={darkMode}
         />
         <div style={textContainerDimensions}>
           <h4 style={textBoxDimensions} className={darkMode ? "light-text" : ""}>

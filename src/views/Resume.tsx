@@ -6,9 +6,10 @@ import styles from "./Resume.module.css";
 interface Props {
   path: RouteComponentProps,
   windowWidth: number
+  darkMode: boolean,
 }
 
-const About: React.FC<Props> = ({windowWidth}) => {
+const About: React.FC<Props> = ({windowWidth, darkMode}) => {
 
   const resumeWidth: number = Math.min(windowWidth, 900) - 50;
 
@@ -23,7 +24,9 @@ const About: React.FC<Props> = ({windowWidth}) => {
         >
           Open in new tab
         </a>
-        &nbsp;|&nbsp;
+        <span className={darkMode ? "light-text" : ""}>
+          &nbsp; | &nbsp;
+        </span>
         <a
           href={resume}
           download

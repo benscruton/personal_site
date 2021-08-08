@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Background from "./components/Background";
+import DarkModeSwitch from './components/DarkModeSwitch';
 import Intro from "./components/Intro";
 import Nav from "./components/Nav";
 import Home from "./views/Home";
@@ -21,14 +22,17 @@ const App: React.FC = () => {
     return () => window.removeEventListener("resize", findWindowWidth);
   }, []);
 
+  const toggleDark = () => setDarkMode(!darkMode);
+
   return (
     <div className="App">
       <Background darkMode={darkMode} />
       <Intro darkMode={darkMode} />
       <Nav darkMode={darkMode} />
+      <DarkModeSwitch darkMode={darkMode} windowWidth={windowWidth} toggle={toggleDark} />
       <Router primary={false}>
         <Home path="/" windowWidth={windowWidth} darkMode={darkMode}/>
-        <Resume path="/resume" windowWidth={windowWidth}/>
+        <Resume path="/resume" windowWidth={windowWidth} darkMode={darkMode} />
         <Projects path="/projects" windowWidth={windowWidth} darkMode={darkMode} />
         <ProjectDisplay path="/projects/:id" windowWidth={windowWidth} darkMode={darkMode} />
       </Router>

@@ -44,6 +44,7 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth, darkMode})
       <MediaBox
         media={project.spotlightMedia}
         dimensions={{maxWidth: "400px", margin: "0 auto"}}
+        darkMode={darkMode}
       />
 
       {project.pitch.map( (para, idx) => 

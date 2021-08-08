@@ -6,13 +6,14 @@ import styles from "./Box.module.css";
 interface Props{
   media: Media,
   dimensions?: CSS.Properties,
-  imageAdjustments?: CSS.Properties
+  imageAdjustments?: CSS.Properties,
+  darkMode?: boolean
 }
 
-const MediaBox: React.FC<Props> = ({media, dimensions, imageAdjustments}) => {
+const MediaBox: React.FC<Props> = ({media, dimensions, imageAdjustments, darkMode}) => {
   return (
     <div
-      className={styles.mediabox}
+      className={darkMode ? styles.mediaboxdark : styles.mediabox}
       style={dimensions}
     >
       {media.videoType?

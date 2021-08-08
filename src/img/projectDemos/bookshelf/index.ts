@@ -35,7 +35,7 @@ const newUserShelves: Media = {
 const customizeShelves: Media = {
   address: customizeShelvesAddr,
   altText: "Add, rename, and delete shelves",
-  videoType: "video/ogg"
+  videoType: "video/webm"
 };
 
 const addBookToShelf: Media = {
