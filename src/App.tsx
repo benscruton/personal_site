@@ -11,9 +11,12 @@ import './App.css';
 import {Router} from "@reach/router";
 
 const App: React.FC = () => {
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  );
+  const toggleDark = () => setDarkMode(!darkMode);
 
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
   const findWindowWidth = () => {
     setWindowWidth(window.innerWidth);
   };
@@ -21,8 +24,6 @@ const App: React.FC = () => {
     window.addEventListener("resize", findWindowWidth);
     return () => window.removeEventListener("resize", findWindowWidth);
   }, []);
-
-  const toggleDark = () => setDarkMode(!darkMode);
 
   return (
     <div className="App">
