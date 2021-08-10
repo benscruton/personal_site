@@ -88,7 +88,7 @@ dinnerGetter.description.push({
 });
 
 dinnerGetter.description.push({
-  text: "Dinner Getter also helps manage your grocery list while at the store: toggle the switch at the top to \"Store Mode\" to enable a feature that helps with the shopping.  When in Store Mode, simply click (or more likely touch, assuming most users will be on mobile while in the store) an item to cross it off.  Touch again to un-cross of an item.",
+  text: "Dinner Getter also helps manage your grocery list while at the store: toggle the switch at the top to \"Store Mode\" to enable a feature that helps with the shopping.  When in Store Mode, simply click (or, for mobile users, touch) an item to cross it off.  Click or touch again to un-cross of an item.",
   media: demoImages.storeMode
 });
 

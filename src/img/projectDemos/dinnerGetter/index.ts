@@ -1,31 +1,31 @@
-import categoryAddr from "./addEditRemoveCategory.ogg";
-import recipeAddr from "./addRecipe.ogg";
-import ingredientAddr from "./addRemoveIngredients.ogg";
+import categoryAddr from "./addEditRemoveCategory.webm";
+import recipeAddr from "./addRecipe.webm";
+import ingredientAddr from "./addRemoveIngredients.webm";
 import authZeroAddr from "./authZero.png";
-import dragAndDropAddr from "./dragAndDrop.ogg";
+import dragAndDropAddr from "./dragAndDrop.webm";
 import homePageAddr from "./homePage.png";
 import notLoggedInAddr from "./notLoggedIn.png";
 import recipePageAddr from "./recipePage.png";
 import shoppingListAddr from "./shoppingList.png";
-import storeModeAddr from "./storeMode.ogg";
+import storeModeAddr from "./storeMode.webm";
 import Media from "../../../interfaces/Media";
 
 const category: Media = {
   address: categoryAddr,
   altText: "Adding, editing, and removing categories from the categorized list",
-  videoType: "video/ogg"
+  videoType: "video/webm"
 };
 
 const recipe: Media = {
   address: recipeAddr,
   altText: "Adding a new recipe to the database",
-  videoType: "video/ogg"
+  videoType: "video/webm"
 };
 
 const ingredient: Media = {
   address: ingredientAddr,
   altText: "Adding and removing ingredients to the shopping list",
-  videoType: "video/ogg"
+  videoType: "video/webm"
 };
 
 const authZero: Media = {
@@ -36,7 +36,7 @@ const authZero: Media = {
 const dragAndDrop: Media = {
   address: dragAndDropAddr,
   altText: "Reorder ingredients, including across categories, with drag-and-drop functionality",
-  videoType: "video/ogg"
+  videoType: "video/webm"
 };
 
 const homePage: Media = {
@@ -62,7 +62,7 @@ const shoppingList: Media = {
 const storeMode: Media = {
   address: storeModeAddr,
   altText: "Entering store mode on the shopping list",
-  videoType: "video/ogg"
+  videoType: "video/webm"
 };
 
 const images: {readonly [key: string]: Media} = {
