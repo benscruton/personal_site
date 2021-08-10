@@ -73,7 +73,7 @@ chessRoulette.description.push({
 });
 
 chessRoulette.description.push({
-  text: "On the topic of checks, the move logic is written to prevent players from moving into check.  The example here demonstrates this: initially, the Black king is not in check, so the Black knight can move anywhere, but the king cannot move into check.  Once White moves the rook to check the king, the Black knight's only move is to the square that would block the check.",
+  text: "Continuing on the topic of checks: the move logic is also written to prevent players from moving into check.  The example here demonstrates this: initially, the Black king is not in check, so the Black knight can move anywhere, but the king cannot move into check.  Once White moves the rook to check the king, the Black knight's only move is to the square that would block the check.",
   media: demoImages.movingInCheck
 });
 

@@ -1,14 +1,14 @@
-import changeSpriteAddr from "./changeSpriteStyle.ogg";
-import createJoinStartAddr from "./createJoinStartSocket.ogg";
-import editUserAddr from "./editUser.ogg";
-import foolsMateAddr from "./foolsMate.ogg";
-import gameFiltersAddr from "./gameFilters.ogg";
+import changeSpriteAddr from "./changeSpriteStyle.webm";
+import createJoinStartAddr from "./createJoinStartSocket.webm";
+import editUserAddr from "./editUser.webm";
+import foolsMateAddr from "./foolsMate.webm";
+import gameFiltersAddr from "./gameFilters.webm";
 import gameLobbyAddr from "./gameLobby.png";
 import loginAddr from "./login.png";
-import moveLogAddr from "./moveLog.ogg";
-import movingInCheckAddr from "./movingInCheck.ogg";
-import pawnPromotionAddr from "./pawnPromotion.ogg";
-import offerDrawResignAddr from "./offerDrawResign.ogg";
+import moveLogAddr from "./moveLog.webm";
+import movingInCheckAddr from "./movingInCheck.webm";
+import pawnPromotionAddr from "./pawnPromotion.webm";
+import offerDrawResignAddr from "./offerDrawResign.webm";
 import Media from "../../../interfaces/Media";
 
 const login: Media = {
