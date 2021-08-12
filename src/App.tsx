@@ -11,11 +11,17 @@ import './App.css';
 import {Router} from "@reach/router";
 
 const App: React.FC = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-  );
-  const toggleDark = () => setDarkMode(!darkMode);
 
+  // DARK MODE SETTINGS:
+  // 0 = follow system  ---  1 = light mode  ---  2 = dark mode
+  const initialDarkModePref: number = parseInt(localStorage.getItem("darkMode") || "0");
+  const [darkMode, setDarkMode] = useState<boolean>(initialDarkModePref ?
+    initialDarkModePref === 2
+    :
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
+
+  // WINDOW WIDTH SETTINGS
   const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
   const findWindowWidth = () => {
     setWindowWidth(window.innerWidth);
@@ -30,7 +36,14 @@ const App: React.FC = () => {
       <Background darkMode={darkMode} />
       <Intro darkMode={darkMode} />
       <Nav darkMode={darkMode} />
-      <DarkModeSwitch darkMode={darkMode} windowWidth={windowWidth} toggle={toggleDark} />
+
+      <DarkModeSwitch
+        darkMode={darkMode}
+        initialPref={initialDarkModePref}
+        windowWidth={windowWidth}
+        setDarkMode={setDarkMode}
+      />
+
       <Router primary={false}>
         <Home path="/" windowWidth={windowWidth} darkMode={darkMode}/>
         <Resume path="/resume" windowWidth={windowWidth} darkMode={darkMode} />
