@@ -7,6 +7,17 @@
     margin: 0 auto;
     padding: 10px 0 1px;
     background-color: antiquewhite;
+    border-radius: 0 0 10px 10px;
+}
+
+.filler{
+    background-image: linear-gradient(antiquewhite 80%, #0000);
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .navbarmain{
@@ -120,6 +131,17 @@
     margin: 0 auto;
     padding: 10px 0 1px;
     background-color: #000;
+    border-radius: 0 0 10px 10px;
+}
+
+.fillerdark{
+    background-image: linear-gradient(#000 80%, #0000);
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .navlinkdark{

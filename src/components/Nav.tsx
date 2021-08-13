@@ -5,10 +5,11 @@ import NavProjectSubMenu from "./NavProjectSubMenu";
 import CSS from "csstype";
 
 interface Props {
-  darkMode: boolean
+  windowWidth: number,
+  darkMode: boolean,
 }
 
-const Nav: React.FC<Props> = ({darkMode}) => {
+const Nav: React.FC<Props> = ({windowWidth, darkMode}) => {
   const [showSubMenu, setShowSubMenu] = useState<boolean>(false);
 
   const toggleSubMenu = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -23,6 +24,12 @@ const Nav: React.FC<Props> = ({darkMode}) => {
 
   return (
     <div className={darkMode ? styles.wrapperdark : styles.wrapper}>
+      <div
+        className={darkMode ? styles.fillerdark : styles.filler}
+        // style={{width: `${windowWidth}px`}}
+      >
+      </div>
+
       <div className={styles.navbarmain}>
         <div className={styles.links}>
 
