@@ -2,3 +2,11 @@
   margin: 10px;
   font-size: 1.1em;
 }
+
+.resemblelink{
+  color: dodgerblue;
+  text-decoration: underline;
+  text-decoration-color: dodgerblue;
+  font-family: "STIX Two Math", serif;
+  cursor: pointer;
+}
