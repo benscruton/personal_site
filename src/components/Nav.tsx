@@ -48,7 +48,7 @@ const Nav: React.FC<Props> = ({darkMode}) => {
               style={showSubMenu? transparentStyle : {}}
             >
               {/* &#9656; Projects */}
-              {">"} Projects
+              {">"}&nbsp;Projects
             </a>
             
             {showSubMenu?

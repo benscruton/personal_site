@@ -19,7 +19,7 @@ const NavProjectSubMenu: React.FC<Props> = ({styles, darkMode, toggleMenu, hideM
       <li>
         <a href="/projects" onClick={toggleMenu}>
         {/* &#9663; Projects */}
-        v Projects
+        v&nbsp;Projects
         </a>
       </li>
 
@@ -27,6 +27,7 @@ const NavProjectSubMenu: React.FC<Props> = ({styles, darkMode, toggleMenu, hideM
         <Link
           to="/projects"
           onClick={hideMenu}
+          className={styles.boldleft}
         >
           Projects Home
         </Link>
@@ -37,7 +38,7 @@ const NavProjectSubMenu: React.FC<Props> = ({styles, darkMode, toggleMenu, hideM
             to={proj.title.mainTitle.linkAddress || "/projects"}
             onClick={hideMenu}
           >
-            {proj.title.mainTitle.text}
+            - {proj.title.mainTitle.text}
           </Link>
         </li>
       )}
