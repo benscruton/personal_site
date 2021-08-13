@@ -40,7 +40,7 @@ const App: React.FC = () => {
       <div className="App">
         <Background darkMode={darkMode} />
         <Intro darkMode={darkMode} />
-        <Nav windowWidth={windowWidth} darkMode={darkMode} />
+        <Nav darkMode={darkMode} />
         <DarkModeSwitch
           darkMode={darkMode}
           initialPref={initialDarkModePref}
