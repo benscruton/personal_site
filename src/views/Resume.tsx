@@ -1,10 +1,8 @@
-import { RouteComponentProps } from "@reach/router";
 import React, { useState } from "react";
 import resume from "../img/pdfs/Scruton_Benjamin_resume.pdf";
 import styles from "./Resume.module.css";
 
 interface Props {
-  path: RouteComponentProps,
   windowWidth: number
   darkMode: boolean,
 }

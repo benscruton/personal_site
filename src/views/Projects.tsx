@@ -1,4 +1,3 @@
-import { RouteComponentProps } from "@reach/router";
 import React from "react";
 import Box from "../components/Box";
 import styles from "./Projects.module.css";
@@ -6,7 +5,6 @@ import CSS from "csstype";
 import allProjects from "../projectInfo";
 
 interface Props {
-  path: RouteComponentProps,
   windowWidth: number,
   darkMode: boolean
 }

@@ -8,7 +8,11 @@ import Projects from "./views/Projects";
 import ProjectDisplay from "./views/ProjectDisplay";
 import Resume from "./views/Resume";
 import './App.css';
-import {Router} from "@reach/router";
+import {
+  HashRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 const App: React.FC = () => {
 
@@ -32,25 +36,37 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="App">
-      <Background darkMode={darkMode} />
-      <Intro darkMode={darkMode} />
-      <Nav darkMode={darkMode} />
+    <Router>
+      <div className="App">
+        <Background darkMode={darkMode} />
+        <Intro darkMode={darkMode} />
+        <Nav darkMode={darkMode} />
+        <DarkModeSwitch
+          darkMode={darkMode}
+          initialPref={initialDarkModePref}
+          windowWidth={windowWidth}
+          setDarkMode={setDarkMode}
+        />
 
-      <DarkModeSwitch
-        darkMode={darkMode}
-        initialPref={initialDarkModePref}
-        windowWidth={windowWidth}
-        setDarkMode={setDarkMode}
-      />
+        <Switch>
+          <Route exact path="/">
+            <Home windowWidth={windowWidth} darkMode={darkMode} />
+          </Route>
 
-      <Router primary={false}>
-        <Home path="/" windowWidth={windowWidth} darkMode={darkMode}/>
-        <Resume path="/resume" windowWidth={windowWidth} darkMode={darkMode} />
-        <Projects path="/projects" windowWidth={windowWidth} darkMode={darkMode} />
-        <ProjectDisplay path="/projects/:id" windowWidth={windowWidth} darkMode={darkMode} />
-      </Router>
-    </div>
+          <Route path="/resume">
+            <Resume windowWidth={windowWidth} darkMode={darkMode} />
+          </Route>
+
+          <Route exact path="/projects">
+            <Projects windowWidth={windowWidth} darkMode={darkMode} />
+          </Route>
+
+          <Route path="/projects/:id">
+            <ProjectDisplay windowWidth={windowWidth} darkMode={darkMode} />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Box.module.css";
 import CSS from "csstype";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import Media from "../interfaces/Media";
 import BoxTitle from "../interfaces/BoxTitle";
 import BoxFooter from "../interfaces/BoxFooter";

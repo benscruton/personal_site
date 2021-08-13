@@ -1,6 +1,6 @@
 import React from "react";
 import TextWithLink from "../interfaces/TextWithLink";
-import { Link } from "@reach/router";
+import { Link } from "react-router-dom";
 
 interface Props{
   items: TextWithLink[]

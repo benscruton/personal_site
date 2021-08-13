@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteComponentProps, Link } from "@reach/router";
+import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import photoAddr from "../img/photo_cropped.png";
 import darkPhotoAddr from "../img/photo_cropped_dark.png";
@@ -10,7 +10,6 @@ import CSS from "csstype";
 declare module ".svg";
 
 interface Props {
-  path: RouteComponentProps,
   windowWidth: number,
   darkMode: boolean
 }
