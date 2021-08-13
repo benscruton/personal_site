@@ -64,9 +64,8 @@
     min-width: 175px;
     z-index: 1;
     text-align: left;
-    margin-top: -34px;
-    margin-left: -15px;
-    left: -15px;
+    top: -15px;
+    left: -30px;
 }
 
 .submenu li{
@@ -143,11 +142,11 @@
     display: block;
     position: absolute;
     top: 19px;
-    min-width: 160px;
+    min-width: 175px;
     z-index: 1;
     text-align: left;
-    margin-top: -34px;
-    margin-left: -15px;
+    top: -15px;
+    left: -30px;
 }
 
 .submenudark li{
@@ -181,6 +180,8 @@
     display: inline-block;
     border: none;
     border-radius: 10px;
+    position: relative;
+    left: 17px;
 }
 
 .submenudark li:last-child{
