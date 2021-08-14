@@ -17,12 +17,16 @@ import {
 const App: React.FC = () => {
 
   // DARK MODE SETTINGS:
-  // 0 = follow system  ---  1 = light mode  ---  2 = dark mode
-  const initialDarkModePref: number = parseInt(localStorage.getItem("darkMode") || "0");
-  const [darkMode, setDarkMode] = useState<boolean>(initialDarkModePref ?
-    initialDarkModePref === 2
+  // 0: follow system  ---  1: light mode  ---  2: dark mode
+  const systemDarkMode: boolean = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const keyFromStorage: string | null = localStorage.getItem("darkMode");
+  const initialDarkModePref: number = (keyFromStorage === null?
+    systemDarkMode ? 2 : 1
     :
-    window.matchMedia("(prefers-color-scheme: dark)").matches
+    parseInt(keyFromStorage)
+  );
+  const [darkMode, setDarkMode] = useState<boolean>(
+    initialDarkModePref ? initialDarkModePref === 2 : systemDarkMode
   );
 
   // WINDOW WIDTH SETTINGS

@@ -31,8 +31,8 @@ const DarkModeSwitch: React.FC<Props> = ({darkMode, initialPref, windowWidth, se
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const togglePreferSystemMode = () => {
-    setPreferSystemMode(!preferSystemMode);
     let key: string = preferSystemMode ? (darkMode ? "2" : "1") : "0";
+    setPreferSystemMode(!preferSystemMode);
     localStorage.setItem("darkMode", key);
     setDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
   };
