@@ -34,7 +34,7 @@ const ProjectFound: React.FC<Props> = ({project, styles, windowWidth, darkMode})
       {project.title.subtitle?
         <h3 className={darkMode ? styles.subtitledark : styles.subtitle}>
           <SeparatedList
-            items={project.title.subtitle}
+            items={project.title.subtitle.filter(st => st.text !== "Description")}
           />
         </h3>
         :

@@ -5,12 +5,16 @@ import demoImages from "../img/projectDemos/dinnerGetter";
 
 const dinnerGetter: Project = {
   id: "dinnerGetter",
+  localAddress: "/projects/dinnergetter",
   title: {
     mainTitle: {
       text: "Dinner Getter",
-      linkAddress: "/projects/dinnergetter"
     },
     subtitle: [
+      {
+        text: "Description",
+        linkAddress: "/projects/dinnergetter"
+      },
       {
         text: "GitHub",
         linkAddress: "https://github.com/benscruton/dinnergetter",

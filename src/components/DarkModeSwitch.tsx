@@ -79,7 +79,7 @@ const DarkModeSwitch: React.FC<Props> = ({darkMode, initialPref, windowWidth, se
           onChange={togglePreferSystemMode}
         />
         <label htmlFor="darkmodedefault" className={darkMode ? "light-text" : ""}>
-          Use device default
+          Use device settings
         </label>
       </div>
     </div>

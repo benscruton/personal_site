@@ -5,12 +5,21 @@ import demoImages from "../img/projectDemos/chessRoulette";
 
 const chessRoulette: Project = {
   id: "chessRoulette",
+  localAddress: "/projects/chessroulette",
   title: {
     mainTitle: {
       text: "Chess Roulette",
-      linkAddress: "/projects/chessroulette"
     },
     subtitle: [
+      {
+        text: "Live link",
+        linkAddress: "https://frozen-anchorage-73372.herokuapp.com/",
+        external: true
+      },
+      {
+        text: "Description",
+        linkAddress: "/projects/chessroulette"
+      },
       {
         text: "GitHub",
         linkAddress: "https://github.com/benscruton/chess_roulette",

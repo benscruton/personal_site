@@ -35,7 +35,7 @@ const NavProjectSubMenu: React.FC<Props> = ({styles, darkMode, toggleMenu, hideM
       {projects.map( (proj, idx) =>
         <li key={idx}>
           <Link
-            to={proj.title.mainTitle.linkAddress || "/projects"}
+            to={proj.localAddress || "/projects"}
             onClick={hideMenu}
           >
             - {proj.title.mainTitle.text}

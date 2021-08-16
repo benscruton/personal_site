@@ -4,6 +4,7 @@ import BoxTitle from "./BoxTitle";
 
 interface Project{
   id: string,
+  localAddress?: string,
   title: BoxTitle,
   description: ProjectDescriptor[],
   pitch: string[],

@@ -5,12 +5,16 @@ import demoImages from "../img/projectDemos/bookshelf";
 
 const bookshelf: Project = {
   id: "bookshelf",
+  localAddress: "/projects/bookshelf",
   title: {
     mainTitle: {
       text: "Bookshelf",
-      linkAddress: "/projects/bookshelf"
     },
     subtitle: [
+      {
+        text: "Description",
+        linkAddress: "/projects/bookshelf",
+      },
       {
         text: "GitHub",
         linkAddress: "https://github.com/benscruton/books_project",
