@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
-import photoAddr from "../img/photo_cropped.png";
-import darkPhotoAddr from "../img/photo_cropped_dark.png";
+import photoAddr from "../img/profile_photo_crop.png";
+import darkPhotoAddr from "../img/profile_photo_crop_dark.png";
 import MediaBox from "../components/MediaBox";
 import Media from "../interfaces/Media";
 import CSS from "csstype";
