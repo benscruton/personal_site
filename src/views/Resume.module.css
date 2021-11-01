@@ -10,3 +10,13 @@
   font-family: "STIX Two Math", serif;
   cursor: pointer;
 }
+
+.rule{
+  width: 80%;
+  margin: 10px auto 15px;
+}
+
+.mainlink{
+  font-size: 1.5em;
+  font-weight: bold;
+}

@@ -24,12 +24,6 @@ const About: React.FC<Props> = ({windowWidth, darkMode}) => {
     <div>
       {/* <h1>Résumé:</h1> */}
       <p className={styles.linktext}>
-        <a href="/resume" onClick={toggleEmbed}>
-          {viewEmbed ? "Hide" : "View"} embedded
-        </a>
-        <span className={darkMode ? "light-text" : ""}>
-          &nbsp; | &nbsp;
-        </span>
         <a
           href={resume}
           target="_blank"
@@ -47,6 +41,14 @@ const About: React.FC<Props> = ({windowWidth, darkMode}) => {
           Download
         </a>
       </p>
+      <hr className={styles.rule}/>
+
+      <p className={viewEmbed ? styles.resemblelink : styles.mainlink}>
+        <a href="/resume" onClick={toggleEmbed}>
+          Click to {viewEmbed ? "hide" : "view"} embedded pdf
+        </a>
+      </p>
+      <br />
 
       {viewMobileWarning? 
         <p className={darkMode ? "light-text" : ""}>
