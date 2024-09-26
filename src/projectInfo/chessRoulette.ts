@@ -13,7 +13,7 @@ const chessRoulette: Project = {
     subtitle: [
       {
         text: "Live link",
-        linkAddress: "https://frozen-anchorage-73372.herokuapp.com/",
+        linkAddress: "https://chess.benscruton.horse/",
         external: true
       },
       {
@@ -107,14 +107,3 @@ chessRoulette.description.push({
 });
 
 export default chessRoulette;
-
-  // login,
-  // editUser,
-  // gameLobby,
-  // gameFilters,
-  // createJoinStart,
-  // foolsMate,
-  // movingInCheck,
-  // pawnPromotion,
-  // moveLog,
-  // changeSprite

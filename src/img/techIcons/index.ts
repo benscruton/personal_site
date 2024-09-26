@@ -10,7 +10,7 @@ import djangoAddr from "./django.svg";
 import expressjsAddr from "./expresswordlogo.png";
 import htmlAddr from "./html5.png";
 import javaAddr from "./java.png";
-import javascriptAddr from "./javascript.png";
+import javascriptAddr from "./JavaScript.png";
 import jqueryAddr from "./jQuery.png";
 import jwtAddr from "./jwt.png";
 import materializeAddr from "./materialize.svg";
